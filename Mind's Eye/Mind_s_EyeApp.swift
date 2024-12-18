@@ -25,7 +25,7 @@ struct Mind_s_EyeApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MindEyeView()
         }
         .modelContainer(sharedModelContainer)
     }
