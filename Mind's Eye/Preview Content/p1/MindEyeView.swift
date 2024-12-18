@@ -56,11 +56,16 @@ struct MindEyeView: View {
                     .padding(.horizontal)
                     .padding(.bottom, 80)
                     
+                    
+                    
+                    
+                    
                     NavigationLink(
                                            destination: CaseSelectionView(),
                                            isActive: $viewModel.isNextViewActive,
                                            label: { EmptyView() }
                                        )
+                    
                 }
                 .padding()
             }
