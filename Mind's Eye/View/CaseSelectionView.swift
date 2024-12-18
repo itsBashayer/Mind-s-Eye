@@ -1,22 +1,9 @@
-//
-//  Untitled.swift
-//  EYEGAMEAPP
-//
-//  Created by Malak on 18/12/2024.
-//
-
-//
-//  Untitled.swift
-//  EYEGAMEAPP
-//
-//  Created by Malak on 18/12/2024.
-//
-
 import SwiftUI
 
 struct CaseSelectionView: View {
     @StateObject private var viewModel = CaseViewModel()
     @State private var selectedCaseIndex: Int? = nil  // Track the selected button
+    @State private var navigateToStory = false // State for navigation
     
     var body: some View {
         NavigationStack {
@@ -36,14 +23,28 @@ struct CaseSelectionView: View {
                     
                     VStack(spacing: 20) {
                         ForEach(viewModel.cases.indices, id: \.self) { index in
-                            CaseButton(
-                                title: viewModel.cases[index].title,
-                                hint: viewModel.cases[index].hint,
-                                isSelected: selectedCaseIndex == index,
-                                onTap: {
-                                    selectedCaseIndex = index  // Set the selected case index
+                            if index == 0 {
+                                NavigationLink(destination: Story(), isActive: $navigateToStory) {
+                                    CaseButton(
+                                        title: viewModel.cases[index].title,
+                                        hint: viewModel.cases[index].hint,
+                                        isSelected: selectedCaseIndex == index,
+                                        onTap: {
+                                            selectedCaseIndex = index
+                                            navigateToStory = true // Trigger navigation to Story view
+                                        }
+                                    )
                                 }
-                            )
+                            } else {
+                                CaseButton(
+                                    title: viewModel.cases[index].title,
+                                    hint: viewModel.cases[index].hint,
+                                    isSelected: selectedCaseIndex == index,
+                                    onTap: {
+                                        selectedCaseIndex = index // Set the selected case index
+                                    }
+                                )
+                            }
                         }
                     }
                 }
@@ -68,7 +69,6 @@ struct CaseButton: View {
                 .frame(maxWidth: .infinity, minHeight: 60)
                 .background(
                     isSelected ? Color.red : Color.black
-                    
                 )
                 .clipShape(RoundedRectangle(cornerRadius: 30))
                 .overlay(
@@ -81,15 +81,6 @@ struct CaseButton: View {
                 .accessibilityHint(hint)
                 .accessibilityAddTraits(.isButton)
         }
-    }
-}
-
-struct NextView: View {
-    var body: some View {
-        Text("You are on the next page!")
-            .font(.title)
-            .fontWeight(.bold)
-            .padding()
     }
 }
 

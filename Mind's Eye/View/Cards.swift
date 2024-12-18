@@ -9,7 +9,7 @@ struct Cards: View {
 
     var body: some View {
         ZStack {
-            Image("background")
+            Image("Image2")
                 .resizable()
                 .scaledToFill()
                 .ignoresSafeArea()

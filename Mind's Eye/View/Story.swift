@@ -1,11 +1,15 @@
+//  Name.swift
+//  Mind's Eye
+//
+//  Created by Bashayer on 12/12/2024.
 
 import SwiftUI
 import AVFoundation
 
 class AudioPlayerManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
-@Published var isPlaying = false
-@Published var isFinished = false
-var audioPlayer: AVAudioPlayer?
+    @Published var isPlaying = false
+    @Published var isFinished = false
+    var audioPlayer: AVAudioPlayer?
 
     func prepareAudio() {
         if let url = Bundle.main.url(forResource: "CrimeStory", withExtension: "MP3") {
@@ -39,62 +43,50 @@ var audioPlayer: AVAudioPlayer?
         player.currentTime = min(player.currentTime + 15, player.duration)
     }
 
+    func stopAudio() {
+        audioPlayer?.stop()
+        isPlaying = false
+    }
+
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         isFinished = true
         isPlaying = false
     }
-    }
+}
 
-    struct Story: View {
+struct Story: View {
     @StateObject private var audioManager = AudioPlayerManager()
 
-  
     var body: some View {
-       // NavigationView {
+        NavigationStack {
             ZStack {
-                
-                Image("backPIC")
+                Image("Image")
                     .resizable()
                     .scaledToFill()
                     .edgesIgnoringSafeArea(.all)
+                    .accessibilityLabel("Background Image")
+                    .accessibilityHint("This is the background image of the story.")
 
                 VStack {
-                    HStack {
-                        Spacer()
-
-                        
-                        NavigationLink(destination: CaseSelectionView()) {
-                            HStack {
-                                Text("Next")
-                                    .foregroundColor(.white)
-                                    .font(.headline)
-                                Image(systemName: "arrow.right")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 25, height: 25)
-                                    .foregroundColor(.white)
-                            }
-                        }
-                        .padding()
-                    }
-
                     Spacer()
 
-                    
                     Image("SImage")
                         .resizable()
                         .scaledToFill()
                         .clipShape(Circle())
                         .frame(width: 260, height: 260)
+                        .accessibilityLabel("Crime Scene Photo")
+                        .accessibilityHint("This is a Crime Scene Photo.")
                         .overlay(
                             Circle()
                                 .stroke(Color.red, lineWidth: 2)
                                 .frame(width: 280, height: 280)
                         )
+                        .accessibilityLabel("Highlighted Circle")
+                        .accessibilityHint("This circle highlights the crime scene photo.")
 
-                    // all the button's
+                    // Audio control buttons
                     HStack(spacing: 20) {
-                        // back
                         Button(action: {
                             audioManager.rewindAudio()
                         }) {
@@ -104,8 +96,9 @@ var audioPlayer: AVAudioPlayer?
                                 .frame(width: 25, height: 25)
                                 .foregroundColor(.white)
                         }
+                        .accessibilityLabel("Rewind Button")
+                        .accessibilityHint("Rewinds the audio by 15 seconds.")
 
-                        // Back/replay
                         Button(action: {
                             if audioManager.isFinished {
                                 audioManager.prepareAudio()
@@ -117,22 +110,22 @@ var audioPlayer: AVAudioPlayer?
                             ZStack {
                                 Circle()
                                     .fill(Color(red: 0.647, green: 0.007, blue: 0.008))
-                                    .frame(width: 60, height: 60) // CirSize
+                                    .frame(width: 60, height: 60)
                                     .overlay(
                                         Circle()
                                             .stroke(Color.red.opacity(0.6), lineWidth: 4)
                                             .blur(radius: 4)
-                                            .offset(x: 0, y: 0)
-                                    ) // Shadow
+                                    )
                                 Image(systemName: audioManager.isFinished ? "arrow.counterclockwise" : (audioManager.isPlaying ? "pause.fill" : "play.fill"))
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width: 25, height: 25)
-                                    .foregroundColor(Color.black) //Start icon
+                                    .foregroundColor(Color.black)
                             }
                         }
+                        .accessibilityLabel(audioManager.isFinished ? "Restart Button" : (audioManager.isPlaying ? "Pause Button" : "Play Button"))
+                        .accessibilityHint(audioManager.isFinished ? "Restarts the audio." : (audioManager.isPlaying ? "Pauses the audio." : "Plays the audio."))
 
-                        //goforward B
                         Button(action: {
                             audioManager.forwardAudio()
                         }) {
@@ -142,20 +135,42 @@ var audioPlayer: AVAudioPlayer?
                                 .frame(width: 25, height: 25)
                                 .foregroundColor(.white)
                         }
+                        .accessibilityLabel("Forward Button")
+                        .accessibilityHint("Forwards the audio by 15 seconds.")
                     }
                     .padding(.top, 20)
                     .padding(.horizontal, 30)
 
                     Spacer()
+
+                    // NavigationLink
+                    NavigationLink(destination: Name().onAppear {
+                        audioManager.stopAudio()
+                    }) {
+                        Text("Next")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(width: 200, height: 50)
+                            .background(Color.black)
+                            .cornerRadius(10)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 30)
+                                    .stroke(Color.white, lineWidth: 2)
+                            )
+                    }
+                    .accessibilityLabel("Next Button")
+                    .accessibilityHint("Navigates to the next screen.")
+                    .padding(.bottom, 80)
                 }
             }
             .onAppear {
                 audioManager.prepareAudio()
             }
-       // }
+        }
     }
-    }
+}
 
-    #Preview {
+#Preview {
     Story()
-    }
+}
