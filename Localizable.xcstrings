@@ -241,7 +241,14 @@
       }
     },
     "Send" : {
-
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إرسال "
+          }
+        }
+      }
     },
     "This circle highlights the crime scene photo." : {
 
