@@ -6,10 +6,13 @@ struct Cards: View {
     @State private var score = 0 // متغير لحساب النقاط
 
     let correctAnswers = ["key", "wound"]
+    
+    // ترتيب عشوائي للكروت
+    @State private var evidences = ["Key", "Wound"].shuffled()
 
     var body: some View {
         ZStack {
-            Image("Image2")
+            Image("background")
                 .resizable()
                 .scaledToFill()
                 .ignoresSafeArea()
@@ -22,8 +25,9 @@ struct Cards: View {
                     .shadow(color: .white, radius: 10, x: 0, y: 0)
                 
                 HStack(spacing: 20) {
-                    EvidenceCard(evidence: "Key", isCorrect: userAnswers.contains("key"))
-                    EvidenceCard(evidence: "Wound", isCorrect: userAnswers.contains("wound"))
+                    ForEach(evidences, id: \.self) { evidence in
+                        EvidenceCard(evidence: evidence, isCorrect: userAnswers.contains(evidence.lowercased()))
+                    }
                 }
                 
                 VStack(spacing: 10) {
@@ -95,10 +99,11 @@ struct Cards: View {
 struct EvidenceCard: View {
     let evidence: String
     let isCorrect: Bool
-    
+
     @State private var flipped = false
     @State private var rotation = 180.0 // تبدأ مقلوبة
-    
+    @State private var shakeOffset: CGFloat = 0 // متغير للاهتزاز
+
     var body: some View {
         ZStack {
             Group {
@@ -124,17 +129,42 @@ struct EvidenceCard: View {
             }
             .rotation3DEffect(.degrees(rotation), axis: (x: 0, y: 1, z: 0))
         }
+        .offset(x: shakeOffset) // تطبيق تأثير الاهتزاز
         .onTapGesture {
             if isCorrect {
                 flipCard()
+            } else {
+                shakeCard() // اهتزاز عند الإجابة الخاطئة
             }
         }
     }
-    
+
     func flipCard() {
         withAnimation(.easeInOut(duration: 0.6)) {
             rotation += 180
             flipped.toggle()
+        }
+    }
+
+    func shakeCard() {
+        let shakeAnimation = Animation.interpolatingSpring(stiffness: 100, damping: 5)
+        withAnimation(shakeAnimation) {
+            shakeOffset = 15
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            withAnimation(shakeAnimation) {
+                shakeOffset = -15
+            }
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            withAnimation(shakeAnimation) {
+                shakeOffset = 10
+            }
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            withAnimation(shakeAnimation) {
+                shakeOffset = 0
+            }
         }
     }
 }
@@ -164,7 +194,7 @@ struct CustomPopup: View {
                     RoundedRectangle(cornerRadius: 20)
                         .stroke(Color.white, lineWidth: 2)
                 )
-                .shadow(color: Color.red.opacity(0.8), radius: 20, x: 0, y: 0)
+                .shadow(color: Color.red.opacity(0.4), radius: 20, x: 0, y: 0)
         )
     }
 }
@@ -216,8 +246,4 @@ struct Cards_Previews: PreviewProvider {
     static var previews: some View {
         Cards()
     }
-}
-#Preview("Arabic") {
-    Cards()
-        .environment(\.locale, Locale(identifier: "AR"))
 }
