@@ -22,6 +22,7 @@
       }
     },
     "%lld / %lld" : {
+      "comment" : "Arabic",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -55,6 +56,7 @@
       }
     },
     "⭐ Score: %lld / 3" : {
+      "comment" : "Arabic",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -66,6 +68,7 @@
       }
     },
     "Ahmed" : {
+      "comment" : "Arabic",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -124,10 +127,10 @@
             "value" : "صورة مسرح الجريمة "
           }
         }
-      },
-      "shouldTranslate" : false
+      }
     },
     "Disappearance Case" : {
+      "comment" : "Arabic",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -189,9 +192,10 @@
       }
     },
     "Highlighted Circle" : {
-      "shouldTranslate" : false
+
     },
     "MindEye" : {
+      "comment" : "Arabic",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -203,6 +207,7 @@
       }
     },
     "Murder Case" : {
+      "comment" : "Arabic",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -218,7 +223,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الذهاب للصفحة التالية"
+            "value" : "الذهابُ للصفحةِ التاليةْ"
           }
         }
       }
@@ -308,7 +313,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "العودة للقائمة الرئيسية "
+            "value" : "العودةُ للقائمةِ الرئيسيةْ "
           }
         }
       }
@@ -334,6 +339,7 @@
       }
     },
     "Salman" : {
+      "comment" : "Arabic",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -355,6 +361,7 @@
       }
     },
     "Theft Case" : {
+      "comment" : "Arabic",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -366,13 +373,13 @@
       }
     },
     "This circle highlights the crime scene photo." : {
-      "shouldTranslate" : false
+
     },
     "This is a Crime Scene Photo." : {
-      "shouldTranslate" : false
+
     },
     "This is the background image of the story." : {
-      "shouldTranslate" : false
+
     },
     "Title: Mind's Eye" : {
       "localizations" : {
@@ -389,7 +396,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "من هو المتهم؟"
+            "value" : "منْ هوَ المتّهمْ؟"
           }
         }
       }
@@ -399,12 +406,13 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "حليت القضية بنجاح!"
+            "value" : "حليتَ القضيةَ بنجاحٍ!"
           }
         }
       }
     },
     "Yusef" : {
+      "comment" : "Arabic",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
