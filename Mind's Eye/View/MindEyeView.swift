@@ -30,7 +30,7 @@ struct MindEyeView: View {
                     Text(viewModel.subtitle)
                         .font(.system(size: 20))
                         .foregroundColor(.white.opacity(0.8))
-                        .accessibilityLabel(" Description: every sound is a secrect, every evidence is a step froward ")
+                        .accessibilityLabel(" Description: Every voice holds a secrect, every guide leads a step ")
                         .padding(.top, 2)
                         .multilineTextAlignment(.center)
 
