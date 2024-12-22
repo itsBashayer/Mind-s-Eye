@@ -2,6 +2,7 @@
   "sourceLanguage" : "en",
   "strings" : {
     " Description: Every voice holds a secrect, every guide leads a step " : {
+      "comment" : "الوصف: كُلُ صوتٍ سِرْ ، كُلُ دَليلٍ خُطوةْ",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -22,7 +23,7 @@
       }
     },
     "%lld / %lld" : {
-      "comment" : "Arabic",
+      "comment" : "Score: ١/٣",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -56,7 +57,7 @@
       }
     },
     "⭐ Score: %lld / 3" : {
-      "comment" : "Arabic",
+      "comment" : "Score: ١/٣",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -68,7 +69,7 @@
       }
     },
     "Ahmed" : {
-      "comment" : "Arabic",
+      "comment" : "أحمد ",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -130,7 +131,7 @@
       }
     },
     "Disappearance Case" : {
-      "comment" : "Arabic",
+      "comment" : "قضيةُ اختِفاء",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -195,7 +196,7 @@
 
     },
     "MindEye" : {
-      "comment" : "Arabic",
+      "comment" : "عينُ العقلْ",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -207,7 +208,7 @@
       }
     },
     "Murder Case" : {
-      "comment" : "Arabic",
+      "comment" : "قضيةُ قَتلْ",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -339,7 +340,7 @@
       }
     },
     "Salman" : {
-      "comment" : "Arabic",
+      "comment" : "سلمانْ",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -361,7 +362,7 @@
       }
     },
     "Theft Case" : {
-      "comment" : "Arabic",
+      "comment" : "قضيةُ سَرِقةْ",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -412,7 +413,7 @@
       }
     },
     "Yusef" : {
-      "comment" : "Arabic",
+      "comment" : "يوسِف",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
