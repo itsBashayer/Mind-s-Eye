@@ -89,3 +89,8 @@ struct CaseSelectionView_Previews: PreviewProvider {
         CaseSelectionView()
     }
 }
+
+#Preview("Arabic") {
+    CaseSelectionView()
+        .environment(\.locale, Locale(identifier: "AR"))
+}

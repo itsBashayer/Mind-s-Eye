@@ -1,0 +1,287 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    " Description: every sound is a secrect, every evidence is a step froward " : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " الوصف: كُلّ صوتٍ سرّ، كُلّ دليل خُطوة\n"
+          }
+        }
+      }
+    },
+    " Next button " : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التالي "
+          }
+        }
+      }
+    },
+    "⭐ Score: %lld / 3" : {
+
+    },
+    "Ahmed" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أحمد "
+          }
+        }
+      }
+    },
+    "Background Image" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "صورة الخلفية"
+          }
+        }
+      }
+    },
+    "Choose a Case" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اختار القضية "
+          }
+        }
+      }
+    },
+    "Choose the Killer" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خمّن القَاتِل؟ "
+          }
+        }
+      }
+    },
+    "Collect Evidence" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اجمع الادلة"
+          }
+        }
+      }
+    },
+    "Crime Scene Photo" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "صورة مسرح الجريمة "
+          }
+        }
+      }
+    },
+    "Enter your answer" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ادخل الإجابة "
+          }
+        }
+      }
+    },
+    "Forward Button" : {
+
+    },
+    "Forwards the audio by 15 seconds." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تقديم الصوت ١٥ ثانية "
+          }
+        }
+      }
+    },
+    "Go to the Next Level" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الذهاب للمستوى التالي "
+          }
+        }
+      }
+    },
+    "Good job!" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عين العقل!"
+          }
+        }
+      }
+    },
+    "Highlighted Circle" : {
+
+    },
+    "Key" : {
+      "extractionState" : "manual"
+    },
+    "Navigates to the next screen." : {
+
+    },
+    "Next" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التالي"
+          }
+        }
+      }
+    },
+    "Next Button" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التالي "
+          }
+        }
+      }
+    },
+    "Pause Button" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ايقاف مؤقت "
+          }
+        }
+      }
+    },
+    "Pauses the audio." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ايقاف الصوت مؤقتاً "
+          }
+        }
+      }
+    },
+    "Play Button" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "زر التشغيل "
+          }
+        }
+      }
+    },
+    "Plays the audio." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تشغيل الصوت "
+          }
+        }
+      }
+    },
+    "Restart Button" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اعادة تشغيل "
+          }
+        }
+      }
+    },
+    "Restarts the audio." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اعادة تشغيل الصوت"
+          }
+        }
+      }
+    },
+    "Return to the Main Menu" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "العودة للقائمة الرئيسية "
+          }
+        }
+      }
+    },
+    "Rewind Button" : {
+
+    },
+    "Rewinds the audio by 15 seconds." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ارجاع الصوت ١٥ ثانية "
+          }
+        }
+      }
+    },
+    "Send" : {
+
+    },
+    "This circle highlights the crime scene photo." : {
+
+    },
+    "This is a Crime Scene Photo." : {
+
+    },
+    "This is the background image of the story." : {
+
+    },
+    "Title: Mind's Eye" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "العنوان: عين العقل "
+          }
+        }
+      }
+    },
+    "Who is the accused " : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "من هو المتهم؟"
+          }
+        }
+      }
+    },
+    "You solved the case successfully!" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حليت القضية بنجاح!"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

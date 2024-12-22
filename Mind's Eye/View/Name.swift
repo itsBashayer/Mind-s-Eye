@@ -106,3 +106,9 @@ struct Name_Previews: PreviewProvider {
         Name()
     }
 }
+
+
+#Preview("Arabic") {
+    Name()
+        .environment(\.locale, Locale(identifier: "AR"))
+}
