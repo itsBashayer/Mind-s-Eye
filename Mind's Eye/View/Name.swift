@@ -16,7 +16,7 @@ struct Name: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Image("Image")
+                Image("Image2")
                     .resizable()
                     .scaledToFill()
                     .ignoresSafeArea()
