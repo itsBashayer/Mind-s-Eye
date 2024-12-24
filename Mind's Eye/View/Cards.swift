@@ -25,8 +25,8 @@ struct Cards: View {
                         Image("streak") // صورة الملفات
                             .resizable()
                             .frame(width: 62, height: 70) // حجم صورة الملفات
-
-                        Text("\(score) / 4") // النص - السكور يظهر بالنسبة الإجمالية
+ 
+                        Text("\(score) / \(totalScore)") // النص - السكور يظهر بالنسبة الإجمالية
                             .font(.custom("Questv1-Bold", size: 16))
                             .foregroundColor(.black) // لون النص
                             .frame(width: 50, height: 40, alignment: .center) // وضع النص في منتصف الصورة
@@ -58,9 +58,9 @@ struct Cards: View {
                                     // التحقق إذا كان المستخدم قد قام بتجميع كل الأدلة
                                     if userAnswers.count == correctAnswers.count {
                                         userAnswers.removeAll()
-                                        score = 1 // تحديث السكور إلى 1 عند حل جميع الكاردز
+                                        score = totalScore // تحديث السكور إلى كامل النقاط عند حل جميع الكاردز
                                         evidences.shuffle() // إعادة ترتيب الأدلة
-                                        if score >= 1 {
+                                        if score >= totalScore {
                                             withAnimation {
                                                 showSuccessPopup = true
                                             }
@@ -98,9 +98,9 @@ struct Cards: View {
                             }
                             if userAnswers.count == correctAnswers.count {
                                 userAnswers.removeAll()
-                                score = 1 // تحديث السكور إلى 1 عند حل جميع الكاردز
+                                score = totalScore // تحديث السكور إلى كامل النقاط عند حل جميع الكاردز
                                 evidences.shuffle() // إعادة ترتيب الأدلة
-                                if score >= 1 {
+                                if score >= totalScore {
                                     withAnimation {
                                         showSuccessPopup = true
                                     }
@@ -121,22 +121,38 @@ struct Cards: View {
                         Color.black.opacity(0.5)
                             .ignoresSafeArea()
                             .transition(.opacity)
-
+                      
                         VStack(spacing: 20) {
-                            Text("Good job!")
-                                .font(.custom("Questv1-Bold", size: 32))
-                                .fontWeight(.bold)
-                                .foregroundColor(.white)
+                            VStack(spacing: 10) {
+                                Text("Good job!")
+                                    .font(.custom("Questv1-Bold", size: 32))
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.white)
 
-                            Text("You solved the case successfully!")
-                                .font(.custom("Questv1-Bold", size: 20))
-                                .foregroundColor(.white)
+                                Text("You solved the case successfully!")
+                                    .font(.custom("Questv1-Bold", size: 20))
+                                    .foregroundColor(.white)
 
-                            Image("hammer")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 120, height: 120)
-                                .padding(.top, 200)// the hummer alignment to the middle
+                                Image("hammer")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 120, height: 120)
+                            }
+
+                            RoundedRectangle(cornerRadius: 20)
+                                .fill(Color.black)
+                                .frame(width: 350, height: 200)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 20)
+                                        .stroke(Color.white, lineWidth: 2)
+                                    
+                                      
+                                  
+                                )
+                            
+                            
+                                .shadow(color: Color.red.opacity(0.4), radius: 20, x: 0, y: 0)
+
                             VStack(spacing: 20) {
                                 Button("Go to the Next Level") {
                                     withAnimation {
@@ -149,7 +165,6 @@ struct Cards: View {
                                 .font(.headline)
                                 .fontWeight(.bold)
                                 .foregroundColor(Color.red)
-                               // .padding()
                                 .frame(width: 350, height: 52)
                                 .background(Color.white)
                                 .cornerRadius(30)
@@ -157,7 +172,6 @@ struct Cards: View {
                                     RoundedRectangle(cornerRadius: 30)
                                         .stroke(Color.red, lineWidth: 2)
                                 )
-                               
 
                                 Button("Return to the Main Menu") {
                                     navigateToMainMenu = true
@@ -165,7 +179,6 @@ struct Cards: View {
                                 .font(.headline)
                                 .fontWeight(.bold)
                                 .foregroundColor(Color.white)
-                                .padding()
                                 .frame(width: 350, height: 52)
                                 .background(Color.black)
                                 .cornerRadius(30)
@@ -173,22 +186,11 @@ struct Cards: View {
                                     RoundedRectangle(cornerRadius: 30)
                                         .stroke(Color.white, lineWidth: 2)
                                 )
-                           
                             }
-                            .padding(.top, 200)//the alignment of the 2 butttons
-                           
+                            .padding(.top, 20)
                         }
-                        .frame(width: 350, height: 350)
-                        .background(
-                            RoundedRectangle(cornerRadius: 20)
-                                .fill(Color.black)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 20)
-                                        .stroke(Color.white, lineWidth: 2)
-                                )
-                                .shadow(color: Color.red.opacity(0.4), radius: 20, x: 0, y: 0)
-                        )
-                    }//the end of the zstack
+                        .padding(.top, 20)
+                    }
                 }
             }
             .navigationDestination(isPresented: $navigateToMainMenu) {
