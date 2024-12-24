@@ -40,22 +40,6 @@
         }
       }
     },
-    "⭐ Score: %lld / %lld" : {
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Score: ١/٣"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "⭐ Score: %1$lld / %2$lld"
-          }
-        }
-      }
-    },
     "⭐ Score: %lld / 3" : {
       "comment" : "Score: ١/٣",
       "extractionState" : "manual",
@@ -95,7 +79,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "اخِتارَ القضيةْ "
+            "value" : "اخِترِ القضيةْ "
           }
         }
       }
@@ -194,6 +178,17 @@
     },
     "Highlighted Circle" : {
 
+    },
+    "Key" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مفتاح"
+          }
+        }
+      }
     },
     "MindEye" : {
       "comment" : "عينُ العقلْ",
@@ -398,6 +393,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "منْ هوَ المتّهمْ؟"
+          }
+        }
+      }
+    },
+    "Wound" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جرح"
           }
         }
       }
