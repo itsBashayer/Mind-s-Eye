@@ -121,21 +121,37 @@ struct Cards: View {
                         Color.black.opacity(0.5)
                             .ignoresSafeArea()
                             .transition(.opacity)
-
+                      
                         VStack(spacing: 20) {
-                            Text("Good job!")
-                                .font(.custom("Questv1-Bold", size: 32))
-                                .fontWeight(.bold)
-                                .foregroundColor(.white)
+                            VStack(spacing: 10) {
+                                Text("Good job!")
+                                    .font(.custom("Questv1-Bold", size: 32))
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.white)
 
-                            Text("You solved the case successfully!")
-                                .font(.custom("Questv1-Bold", size: 20))
-                                .foregroundColor(.white)
+                                Text("You solved the case successfully!")
+                                    .font(.custom("Questv1-Bold", size: 20))
+                                    .foregroundColor(.white)
 
-                            Image("hammer")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 120, height: 120)
+                                Image("hammer")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 120, height: 120)
+                            }
+
+                            RoundedRectangle(cornerRadius: 20)
+                                .fill(Color.black)
+                                .frame(width: 350, height: 200)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 20)
+                                        .stroke(Color.white, lineWidth: 2)
+                                    
+                                      
+                                  
+                                )
+                            
+                            
+                                .shadow(color: Color.red.opacity(0.4), radius: 20, x: 0, y: 0)
 
                             VStack(spacing: 20) {
                                 Button("Go to the Next Level") {
@@ -171,18 +187,9 @@ struct Cards: View {
                                         .stroke(Color.white, lineWidth: 2)
                                 )
                             }
+                            .padding(.top, 20)
                         }
                         .padding(.top, 20)
-                        .frame(width: 350, height: 400)
-                        .background(
-                            RoundedRectangle(cornerRadius: 20)
-                                .fill(Color.black)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 20)
-                                        .stroke(Color.white, lineWidth: 2)
-                                )
-                                .shadow(color: Color.red.opacity(0.4), radius: 20, x: 0, y: 0)
-                        )
                     }
                 }
             }
