@@ -24,13 +24,13 @@ struct MindEyeView: View {
                         .font(.system(size: 45))
                         .fontWeight(.bold)
                         .foregroundColor(.white)
-                        .accessibilityLabel("Title: Mind's Eye")
+                        .accessibilityLabel("العنوان: عين العقل")
                         .padding(.top, 320)
 
                     Text(viewModel.subtitle)
                         .font(.system(size: 20))
                         .foregroundColor(.white.opacity(0.8))
-                        .accessibilityLabel(" Description: Every voice holds a secrect, every guide leads a step ")
+                        .accessibilityLabel(" الوصف: كلُ صوتٍ سرْ، كلُ دليلٍ خُطوةْ ")
                         .padding(.top, 2)
                         .multilineTextAlignment(.center)
 
@@ -52,7 +52,7 @@ struct MindEyeView: View {
                         
                         
                     }
-                    .accessibilityLabel( " Next button ")
+                    .accessibilityLabel( " التالي ")
                     .padding(.horizontal)
                     .padding(.bottom, 80)
 

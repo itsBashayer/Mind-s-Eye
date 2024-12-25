@@ -40,7 +40,7 @@ struct Cards: View {
                 }
 
                 VStack {
-                    Text("Collect Evidence")
+                    Text("اجمع الأدلة")
                         .font(.custom("Questv1-Bold", size: 32))
                         .foregroundColor(.white)
                         .padding(.bottom, 40)
@@ -89,7 +89,7 @@ struct Cards: View {
                         )
                         .frame(width: 300)
 
-                        Button("Send") {
+                        Button("إرسال") {
                             let answer = currentInput.lowercased()
                             if correctAnswers.contains(answer) && !userAnswers.contains(answer) {
                                 userAnswers.append(answer)
@@ -149,7 +149,7 @@ struct Cards: View {
                                 .shadow(color: Color.red.opacity(0.4), radius: 20, x: 0, y: 0)
 
                             VStack(spacing: 20) {
-                                Button("Go to the Next Level") {
+                                Button("الإنتقال للمرحلة التالية") {
                                     withAnimation {
                                         score = 0
                                         userAnswers.removeAll()
@@ -169,7 +169,7 @@ struct Cards: View {
                                         .stroke(Color.red, lineWidth: 2)
                                 )
 
-                                Button("Return to the Main Menu") {
+                                Button("الرجوع للقائمة الرئيسية") {
                                     navigateToMainMenu = true
                                 }
                                 .font(.headline)

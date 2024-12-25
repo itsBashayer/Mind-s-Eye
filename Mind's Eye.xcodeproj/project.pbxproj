@@ -6,10 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		80A5809C2D1409FF0092322E /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 80A5809B2D1409FF0092322E /* Localizable.xcstrings */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
 		865A7B6B2D1165DF00524862 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -28,15 +24,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		80A5809B2D1409FF0092322E /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		865A7B582D1165DE00524862 /* Mind's Eye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mind's Eye.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		865A7B6A2D1165DF00524862 /* Mind's EyeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mind's EyeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		865A7B742D1165DF00524862 /* Mind's EyeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mind's EyeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		8017F9842D1C033100E79819 /* Exceptions for "Mind's Eye" folder in "Mind's Eye" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Mind-s-Eye-Info.plist",
+			);
+			target = 865A7B572D1165DE00524862 /* Mind's Eye */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		8017F97D2D1C026100E79819 /* ar.lproj */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ar.lproj;
+			sourceTree = "<group>";
+		};
 		865A7B5A2D1165DE00524862 /* Mind's Eye */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8017F9842D1C033100E79819 /* Exceptions for "Mind's Eye" folder in "Mind's Eye" target */,
+			);
 			path = "Mind's Eye";
 			sourceTree = "<group>";
 		};
@@ -80,7 +93,7 @@
 		865A7B4F2D1165DE00524862 = {
 			isa = PBXGroup;
 			children = (
-				80A5809B2D1409FF0092322E /* Localizable.xcstrings */,
+				8017F97D2D1C026100E79819 /* ar.lproj */,
 				865A7B5A2D1165DE00524862 /* Mind's Eye */,
 				865A7B6D2D1165DF00524862 /* Mind's EyeTests */,
 				865A7B772D1165DF00524862 /* Mind's EyeUITests */,
@@ -114,6 +127,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				8017F97D2D1C026100E79819 /* ar.lproj */,
 				865A7B5A2D1165DE00524862 /* Mind's Eye */,
 			);
 			name = "Mind's Eye";
@@ -177,7 +191,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1600;
-				LastUpgradeCheck = 1600;
+				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					865A7B572D1165DE00524862 = {
 						CreatedOnToolsVersion = 16.0;
@@ -219,7 +233,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80A5809C2D1409FF0092322E /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +295,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -346,6 +360,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -406,9 +421,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mind's Eye/Preview Content\"";
-				DEVELOPMENT_TEAM = W2A87VS22G;
+				DEVELOPMENT_TEAM = X57J3QVV8X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mind-s-Eye-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -435,9 +452,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mind's Eye/Preview Content\"";
-				DEVELOPMENT_TEAM = W2A87VS22G;
+				DEVELOPMENT_TEAM = X57J3QVV8X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mind-s-Eye-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

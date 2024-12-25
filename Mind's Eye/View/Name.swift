@@ -22,11 +22,11 @@ struct Name: View {
                     .ignoresSafeArea()
                 
                 VStack(spacing: 30) {
-                    Text("Who is the accused ")
+                    Text("من هو المتهم؟")
                         .font(.system(size: 40))
                         .fontWeight(.bold)
                         .foregroundColor(.white)
-                        .accessibilityLabel("Choose the Killer")
+                        .accessibilityLabel("من هو المتهم")
                         .accessibilityAddTraits(.isHeader)
                     
                     VStack(spacing: 20) {
@@ -34,7 +34,7 @@ struct Name: View {
                             if index == 0 {
                                 NavigationLink(destination: Cards(), isActive: $navigateToStory) {
                                     CaseButton(
-                                        title: "Ahmed",
+                                        title: "أحمد",
                                         hint: viewModel.cases[index].hint,
                                         isSelected: selectedCaseIndex == index,
                                         onTap: {
@@ -45,7 +45,7 @@ struct Name: View {
                                 }
                             } else if index == 1 {
                                 CaseButton(
-                                    title: "Yusef",
+                                    title: "يوسف",
                                     hint: viewModel.cases[index].hint,
                                     isSelected: selectedCaseIndex == index,
                                     onTap: {
@@ -54,7 +54,7 @@ struct Name: View {
                                 )
                             } else if index == 2 {
                                 CaseButton(
-                                    title: "Salman",
+                                    title: "سلمان",
                                     hint: viewModel.cases[index].hint,
                                     isSelected: selectedCaseIndex == index,
                                     onTap: {

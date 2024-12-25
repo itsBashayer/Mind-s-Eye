@@ -13,14 +13,7 @@
       }
     },
     " Next button " : {
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "التالي "
-          }
-        }
-      }
+
     },
     "%lld / %lld" : {
       "comment" : "Score: ١/٣",
@@ -36,26 +29,6 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "%1$lld / %2$lld"
-          }
-        }
-      }
-    },
-    "%lld / 4" : {
-
-    },
-    "⭐ Score: %lld / %lld" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Score: ١/٣"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "⭐ Score: %1$lld / %2$lld"
           }
         }
       }
@@ -81,6 +54,12 @@
             "state" : "translated",
             "value" : "أحمد "
           }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ahmed"
+          }
         }
       }
     },
@@ -101,6 +80,12 @@
             "state" : "translated",
             "value" : "اخِترِ القضيةْ "
           }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose a Case"
+          }
         }
       }
     },
@@ -111,6 +96,12 @@
             "state" : "translated",
             "value" : "خمّن القَاتِل؟ "
           }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose the Killer"
+          }
         }
       }
     },
@@ -120,6 +111,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "اجِمعَ الادلةْ"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Collect Evidence"
           }
         }
       }
@@ -142,6 +139,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "قضيةُ اختِفاء"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Disappearance Case"
           }
         }
       }
@@ -192,6 +195,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "عين العقل!"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Good job!"
           }
         }
       }
@@ -260,6 +269,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "التالي"
+          }
+        }
+      }
+    },
+    "Next button " : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التالي "
           }
         }
       }
@@ -363,6 +383,12 @@
             "state" : "translated",
             "value" : "سلمانْ"
           }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salman"
+          }
         }
       }
     },
@@ -439,13 +465,18 @@
       }
     },
     "Yusef" : {
-      "comment" : "يوسِف",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "يوسِف"
+            "value" : "يوسف"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yusef"
           }
         }
       }

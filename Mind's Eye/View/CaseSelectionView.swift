@@ -14,11 +14,11 @@ struct CaseSelectionView: View {
                     .ignoresSafeArea()
                 
                 VStack(spacing: 30) {
-                    Text("Choose a Case")
+                    Text("اختر القضية")
                         .font(.system(size: 40))
                         .fontWeight(.bold)
                         .foregroundColor(.white)
-                        .accessibilityLabel("Choose a Case")
+                        .accessibilityLabel("اختر القضية")
                         .accessibilityAddTraits(.isHeader)
                     
                     VStack(spacing: 20) {

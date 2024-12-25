@@ -9,9 +9,9 @@ import SwiftUI
 
 class MindEyeViewModel: ObservableObject {
 
-    @Published var title: String = "MindEye"
-    @Published var subtitle: String = "Every voice holds a secret, Every  \n guide leads a step"
-    @Published var buttonText: String = "Next"
+    @Published var title: String = "عين العقل"
+    @Published var subtitle: String = "كلُ صوتٍ سرْ، كلُ دليلٍ خُطوةْ"
+    @Published var buttonText: String = "التالي"
 
   
     @Published var isNextViewActive: Bool = false

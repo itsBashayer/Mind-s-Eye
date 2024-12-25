@@ -1,0 +1,480 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    " Description: Every voice holds a secrect, every guide leads a step " : {
+      "comment" : "الوصف: كُلُ صوتٍ سِرْ ، كُلُ دَليلٍ خُطوةْ",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الوصف: كُلُ صوتٍ سِرْ ، كُلُ دَليلٍ خُطوةْ"
+          }
+        }
+      }
+    },
+    " Next button " : {
+
+    },
+    "%lld / %lld" : {
+      "comment" : "Score: ١/٣",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Score: ١/٣"
+          }
+        }
+      }
+    },
+    "⭐ Score: %lld / 3" : {
+      "comment" : "Score: ١/٣",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Score: ١/٣"
+          }
+        }
+      }
+    },
+    "Ahmed" : {
+      "comment" : "أحمد ",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أحمد "
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ahmed"
+          }
+        }
+      }
+    },
+    "Background Image" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "صورةٌ الخلفيةْ"
+          }
+        }
+      }
+    },
+    "Choose a Case" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اخِترِ القضيةْ "
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose a Case"
+          }
+        }
+      }
+    },
+    "Choose the Killer" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خمّن القَاتِل؟ "
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose the Killer"
+          }
+        }
+      }
+    },
+    "Collect Evidence" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اجِمعَ الادلةْ"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Collect Evidence"
+          }
+        }
+      }
+    },
+    "Crime Scene Photo" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "صورة مسرح الجريمة "
+          }
+        }
+      }
+    },
+    "Disappearance Case" : {
+      "comment" : "قضيةُ اختِفاء",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قضيةُ اختِفاء"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Disappearance Case"
+          }
+        }
+      }
+    },
+    "Enter your answer" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ادخلِ الإجابةْ "
+          }
+        }
+      }
+    },
+    "Forward Button" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "زر التقديم"
+          }
+        }
+      }
+    },
+    "Forwards the audio by 15 seconds." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تقديمُ الصوتَ ١٥ ثانية "
+          }
+        }
+      }
+    },
+    "Go to the Next Level" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الذهابُ للمستوىْ التاليْ "
+          }
+        }
+      }
+    },
+    "Good job!" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عين العقل!"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Good job!"
+          }
+        }
+      }
+    },
+    "Highlighted Circle" : {
+
+    },
+    "Key" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مفتاح"
+          }
+        }
+      }
+    },
+    "MindEye" : {
+      "comment" : "عينُ العقلْ",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عينُ العقلْ"
+          }
+        }
+      }
+    },
+    "Murder Case" : {
+      "comment" : "قضيةُ قَتلْ",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قضيةُ قَتلْ"
+          }
+        }
+      }
+    },
+    "Navigates to the next screen." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الذهابُ للصفحةِ التاليةْ"
+          }
+        }
+      }
+    },
+    "Next" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التالي"
+          }
+        }
+      }
+    },
+    "Next Button" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التالي"
+          }
+        }
+      }
+    },
+    "Next button " : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التالي "
+          }
+        }
+      }
+    },
+    "Pause Button" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ايقاف مؤقت "
+          }
+        }
+      }
+    },
+    "Pauses the audio." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ايقاف الصوت مؤقتاً "
+          }
+        }
+      }
+    },
+    "Play Button" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "زر التشغيل "
+          }
+        }
+      }
+    },
+    "Plays the audio." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تشغيل الصوت "
+          }
+        }
+      }
+    },
+    "Restart Button" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اعادة تشغيل "
+          }
+        }
+      }
+    },
+    "Restarts the audio." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اعادة تشغيل الصوت"
+          }
+        }
+      }
+    },
+    "Return to the Main Menu" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "العودةُ للقائمةِ الرئيسيةْ "
+          }
+        }
+      }
+    },
+    "Rewind Button" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "زر التأخير"
+          }
+        }
+      }
+    },
+    "Rewinds the audio by 15 seconds." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ارجاع الصوت ١٥ ثانية "
+          }
+        }
+      }
+    },
+    "Salman" : {
+      "comment" : "سلمانْ",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سلمانْ"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salman"
+          }
+        }
+      }
+    },
+    "Send" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إرسال "
+          }
+        }
+      }
+    },
+    "Theft Case" : {
+      "comment" : "قضيةُ سَرِقةْ",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قضيةُ سَرِقةْ"
+          }
+        }
+      }
+    },
+    "This circle highlights the crime scene photo." : {
+
+    },
+    "This is a Crime Scene Photo." : {
+
+    },
+    "This is the background image of the story." : {
+
+    },
+    "Title: Mind's Eye" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "العنوان: عين العقل "
+          }
+        }
+      }
+    },
+    "Who is the accused " : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "منْ هوَ المتّهمْ؟"
+          }
+        }
+      }
+    },
+    "Wound" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جرح"
+          }
+        }
+      }
+    },
+    "You solved the case successfully!" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حليتَ القضيةَ بنجاحٍ!"
+          }
+        }
+      }
+    },
+    "Yusef" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يوسف"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yusef"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

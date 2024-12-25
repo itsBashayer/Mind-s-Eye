@@ -10,8 +10,8 @@ import SwiftUI
 
 class CaseViewModel: ObservableObject {
     @Published var cases: [CaseModel] = [
-        CaseModel(title: "Murder Case", hint: "Tap to choose the murder case"),
-        CaseModel(title: "Disappearance Case", hint: "Tap to choose the disappearance case"),
-        CaseModel(title: "Theft Case", hint: "Tap to choose the theft case")
+        CaseModel(title: "قضية قتل", hint: "اضغط لاختيار قضية القتل"),
+        CaseModel(title: "قضية إختفاء", hint: "اضغط لاختيار قضية الإختفاء"),
+        CaseModel(title: "قضية سرقة", hint: "اضغط لاختيار قضية السرقة")
     ]
 }
