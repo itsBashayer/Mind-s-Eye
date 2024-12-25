@@ -4,10 +4,10 @@ struct Cards: View {
     @State private var userAnswers = [String]()
     @State private var showSuccessPopup = false
     @State private var score = 0
-    @State private var totalScore = 4 // تحديد إجمالي النقاط
+    @State private var totalScore = 4
     @State private var evidences = ["Key", "Wound"].shuffled()
     @State private var navigateToMainMenu = false
-    @State private var currentInput = "" // النص المدخل في TextField
+    @State private var currentInput = ""
 
     let correctAnswers = ["key", "wound"]
 
@@ -22,15 +22,15 @@ struct Cards: View {
 
                 HStack {
                     ZStack {
-                        Image("streak") // صورة الملفات
+                        Image("streak")
                             .resizable()
-                            .frame(width: 62, height: 70) // حجم صورة الملفات
- 
-                        Text("\(score) / \(totalScore)") // النص - السكور يظهر بالنسبة الإجمالية
+                            .frame(width: 62, height: 70)
+
+                        Text("\(score) / \(totalScore)")
                             .font(.custom("Questv1-Bold", size: 16))
-                            .foregroundColor(.black) // لون النص
-                            .frame(width: 50, height: 40, alignment: .center) // وضع النص في منتصف الصورة
-                            .offset(x: 4, y: 2) // تحريك النص قليلاً
+                            .foregroundColor(.black)
+                            .frame(width: 50, height: 40, alignment: .center)
+                            .offset(x: 4, y: 2)
                     }
                     .padding(8)
                     .padding(.leading)
@@ -55,11 +55,10 @@ struct Cards: View {
                                     if correctAnswers.contains(flippedEvidence.lowercased()) && !userAnswers.contains(flippedEvidence.lowercased()) {
                                         userAnswers.append(flippedEvidence.lowercased())
                                     }
-                                    // التحقق إذا كان المستخدم قد قام بتجميع كل الأدلة
                                     if userAnswers.count == correctAnswers.count {
                                         userAnswers.removeAll()
-                                        score = totalScore // تحديث السكور إلى كامل النقاط عند حل جميع الكاردز
-                                        evidences.shuffle() // إعادة ترتيب الأدلة
+                                        score = totalScore
+                                        evidences.shuffle()
                                         if score >= totalScore {
                                             withAnimation {
                                                 showSuccessPopup = true
@@ -94,12 +93,12 @@ struct Cards: View {
                             let answer = currentInput.lowercased()
                             if correctAnswers.contains(answer) && !userAnswers.contains(answer) {
                                 userAnswers.append(answer)
-                                currentInput = "" // إعادة تعيين النص
+                                currentInput = ""
                             }
                             if userAnswers.count == correctAnswers.count {
                                 userAnswers.removeAll()
-                                score = totalScore // تحديث السكور إلى كامل النقاط عند حل جميع الكاردز
-                                evidences.shuffle() // إعادة ترتيب الأدلة
+                                score = totalScore
+                                evidences.shuffle()
                                 if score >= totalScore {
                                     withAnimation {
                                         showSuccessPopup = true
@@ -109,9 +108,9 @@ struct Cards: View {
                         }
                         .font(.custom("Questv1-Bold", size: 20))
                         .foregroundColor(.white)
-                        .padding(.vertical, 5)
-                        .disabled(currentInput.isEmpty) // تعطيل الزر إذا كان النص فارغًا
-                        .opacity(currentInput.isEmpty ? 0.5 : 1.0) // تغيير شفافية الزر
+                        .padding(.vertical, 35.0)
+                        .disabled(currentInput.isEmpty)
+                        .opacity(currentInput.isEmpty ? 0.5 : 1.0)
                     }
                     .padding()
                 }
@@ -121,42 +120,38 @@ struct Cards: View {
                         Color.black.opacity(0.5)
                             .ignoresSafeArea()
                             .transition(.opacity)
-                      
+
                         VStack(spacing: 20) {
-                            VStack(spacing: 10) {
-                                Text("Good job!")
-                                    .font(.custom("Questv1-Bold", size: 32))
-                                    .fontWeight(.bold)
-                                    .foregroundColor(.white)
-
-                                Text("You solved the case successfully!")
-                                    .font(.custom("Questv1-Bold", size: 20))
-                                    .foregroundColor(.white)
-
-                                Image("hammer")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 120, height: 120)
-                            }
-
                             RoundedRectangle(cornerRadius: 20)
                                 .fill(Color.black)
-                                .frame(width: 350, height: 200)
+                                .frame(width: 350, height: 300)
+                                .overlay(
+                                    VStack(spacing: 10) {
+                                        Text("Good job!")
+                                            .font(.custom("Questv1-Bold", size: 32))
+                                            .fontWeight(.bold)
+                                            .foregroundColor(.white)
+
+                                        Text("You solved the case successfully!")
+                                            .font(.custom("Questv1-Bold", size: 20))
+                                            .foregroundColor(.white)
+
+                                        Image("hammer")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 120, height: 120)
+                                    }
+                                )
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 20)
                                         .stroke(Color.white, lineWidth: 2)
-                                    
-                                      
-                                  
                                 )
-                            
-                            
                                 .shadow(color: Color.red.opacity(0.4), radius: 20, x: 0, y: 0)
 
                             VStack(spacing: 20) {
                                 Button("Go to the Next Level") {
                                     withAnimation {
-                                        score = 0 // إعادة ضبط السكور
+                                        score = 0
                                         userAnswers.removeAll()
                                         evidences.shuffle()
                                         showSuccessPopup = false
@@ -164,6 +159,7 @@ struct Cards: View {
                                 }
                                 .font(.headline)
                                 .fontWeight(.bold)
+                                .padding(.vertical, 18.0)
                                 .foregroundColor(Color.red)
                                 .frame(width: 350, height: 52)
                                 .background(Color.white)
@@ -187,9 +183,7 @@ struct Cards: View {
                                         .stroke(Color.white, lineWidth: 2)
                                 )
                             }
-                            .padding(.top, 20)
                         }
-                        .padding(.top, 20)
                     }
                 }
             }
@@ -253,3 +247,6 @@ struct Cards_Previews: PreviewProvider {
         Cards()
     }
 }
+
+
+

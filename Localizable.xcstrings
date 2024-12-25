@@ -99,7 +99,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "اخِتارَ القضيةْ "
+            "value" : "اخِترِ القضيةْ "
           }
         }
       }
@@ -198,6 +198,17 @@
     },
     "Highlighted Circle" : {
 
+    },
+    "Key" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مفتاح"
+          }
+        }
+      }
     },
     "MindEye" : {
       "comment" : "عينُ العقلْ",
@@ -402,6 +413,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "منْ هوَ المتّهمْ؟"
+          }
+        }
+      }
+    },
+    "Wound" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جرح"
           }
         }
       }
