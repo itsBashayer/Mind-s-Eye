@@ -40,6 +40,26 @@
         }
       }
     },
+    "%lld / 4" : {
+
+    },
+    "⭐ Score: %lld / %lld" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Score: ١/٣"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "⭐ Score: %1$lld / %2$lld"
+          }
+        }
+      }
+    },
     "⭐ Score: %lld / 3" : {
       "comment" : "Score: ١/٣",
       "extractionState" : "manual",
