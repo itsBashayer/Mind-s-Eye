@@ -40,7 +40,11 @@
         }
       }
     },
+    "%lld / 4" : {
+
+    },
     "⭐ Score: %lld / %lld" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
