@@ -1,5 +1,5 @@
 import SwiftUI
-import AVFoundation
+import AVFoundation  // أُضيف: لاستيراد مكتبة الصوت
 
 struct Cards: View {
     @State private var userAnswers = [String]()
@@ -24,6 +24,24 @@ struct Cards: View {
         "key": 0,
         "wound": 0
     ]
+    
+    // أُضيف: متغير للتحكم بالصوت
+    @State private var audioPlayer: AVAudioPlayer?
+
+    // أُضيف: دالة لتشغيل الصوت
+    func playSound(soundName: String) {
+        if let path = Bundle.main.path(forResource: soundName, ofType: "mp3") {
+            let url = URL(fileURLWithPath: path)
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+                audioPlayer?.play()
+            } catch {
+                print("Could not play the sound file: \(error)")
+            }
+        } else {
+            print("Sound file not found: \(soundName).mp3")
+        }
+    }
     
     var body: some View {
         NavigationStack {
@@ -99,6 +117,9 @@ struct Cards: View {
                             // 1) هل الإجابة صحيحة ولم نستخدمها من قبل؟
                             if correctAnswers.contains(answer),
                                !userAnswers.contains(answer) {
+                                
+                                // أُضيف: تشغيل صوت سونيك عند الإجابة الصحيحة
+                                playSound(soundName: "sonic-coin-sound")
                                 
                                 // قلب الكرت المطابق
                                 flippedStates[answer] = true
@@ -288,8 +309,8 @@ extension View {
     }
 }
 
+// شاشة "القائمة الرئيسية" (للتنقل)
 
-// شاشة "القائمة الرئيسية" أو مستوى آخر
 
 struct Cards_Previews: PreviewProvider {
     static var previews: some View {
