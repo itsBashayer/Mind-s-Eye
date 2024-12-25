@@ -13,17 +13,16 @@ struct Cards: View {
     // الإجابات الصحيحة
     let correctAnswers = ["key", "wound"]
     
-    // قاموس للتحكم بحالة الانقلاب لكل دليل
     @State private var flippedStates: [String: Bool] = [
         "key": false,
         "wound": false
     ]
-    
-    // قاموس للتحكم بعدد اهتزازات كل بطاقة
+
     @State private var shakeStates: [String: Int] = [
         "key": 0,
         "wound": 0
     ]
+
     
     var body: some View {
         NavigationStack {
@@ -41,11 +40,15 @@ struct Cards: View {
                             .resizable()
                             .frame(width: 82, height: 90)
                         
-                        Text("\(score) / \(totalScore)")
+                        Text(String(format: NSLocalizedString("%d / %d", comment: "Score format: current score out of total score"), score, totalScore))
                             .font(.custom("Questv1-Bold", size: 16))
                             .foregroundColor(.black)
                             .frame(width: 50, height: 40, alignment: .center)
+                            .accessibilityLabel(
+                                String(format: NSLocalizedString("Score: %d out of %d", comment: "Accessibility label for score"), score, totalScore)
+                            )
                             .offset(x: -2, y: 8)
+
                     }
                     .padding(8)
                     .padding(.leading, 310)
@@ -55,6 +58,7 @@ struct Cards: View {
                 }
                 
                 VStack {
+                    
                     Text("Collect Evidence")
                         .font(.custom("Questv1-Bold", size: 32))
                         .foregroundColor(.white)
@@ -94,50 +98,44 @@ struct Cards: View {
                         
                         Button("Send") {
                             let answer = currentInput.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
+                            print("Input Answer: \(answer)")
                             currentInput = ""
 
-                            // 1) هل الإجابة صحيحة ولم نستخدمها من قبل؟
-                            if correctAnswers.contains(answer),
-                               !userAnswers.contains(answer) {
-                                
-                                // قلب الكرت المطابق
+                            // Debugging state before logic
+                            print("Current flippedStates: \(flippedStates)")
+                            print("Current shakeStates: \(shakeStates)")
+                            print("User Answers: \(userAnswers)")
+
+                            if correctAnswers.contains(answer), !userAnswers.contains(answer) {
                                 flippedStates[answer] = true
                                 userAnswers.append(answer)
-                                
-                                // تحقق هل جمعنا كل الأدلة الصحيحة؟
+                                print("Correct answer. Flipping \(answer).")
+
                                 if userAnswers.count == correctAnswers.count {
-                                    // تأخير بسيط لظهور النافذة بعد قلب الكرت
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
-                                        
-                                        // (المطلوب) عند إكمال جميع الأدلة تزيد الدرجة بمقدار 1 فقط
                                         if score < totalScore {
                                             score += 1
                                         }
-                                        
-                                        // خلط الكروت أو أي إجراء إضافي
                                         evidences.shuffle()
-                                        
-                                        // إظهار النافذة المنبثقة
                                         withAnimation {
                                             showSuccessPopup = true
                                         }
                                     }
                                 }
-                            }
-                            else {
-                                // الإجابة خاطئة -> نختار كارت عشوائي من الكروت غير المقلوبة ليهتز
+                            } else {
                                 let unflippedEvidences = evidences.filter {
                                     flippedStates[$0.lowercased()] == false
                                 }
-                                
+                                print("Unflipped Evidences: \(unflippedEvidences)")
+
                                 if let randomCard = unflippedEvidences.randomElement() {
-                                    withAnimation {
-                                        let key = randomCard.lowercased()
-                                        shakeStates[key, default: 0] += 1
-                                    }
+                                    let key = randomCard.lowercased()
+                                    shakeStates[key, default: 0] += 1
+                                    print("Shaking card: \(key)")
                                 }
                             }
                         }
+
                         .font(.custom("Questv1-Bold", size: 20))
                         .foregroundColor(.white)
                         .padding(.vertical, 35.0)
@@ -221,6 +219,7 @@ struct Cards: View {
                         }
                     }
                 }
+                
             }
             .navigationDestination(isPresented: $navigateToMainMenu) {
                 CaseSelectionView()
@@ -240,6 +239,7 @@ struct EvidenceCard: View {
     var body: some View {
         ZStack {
             // الوجه الخلفي (عند flipped = false)
+            
             RoundedRectangle(cornerRadius: 20)
                 .fill(Color.black)
                 .frame(width: 150, height: 200)

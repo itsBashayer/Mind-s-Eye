@@ -20,14 +20,14 @@ struct MindEyeView: View {
 
                 VStack {
                     
-                    Text(viewModel.title)
+                    Text("MindEye")
                         .font(.system(size: 45))
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                         .accessibilityLabel("Title: Mind's Eye")
                         .padding(.top, 320)
 
-                    Text(viewModel.subtitle)
+                    Text("Every voice holds a secret, Every  \n guide leads a step")
                         .font(.system(size: 20))
                         .foregroundColor(.white.opacity(0.8))
                         .accessibilityLabel(" Description: Every voice holds a secrect, every guide leads a step ")
@@ -39,7 +39,7 @@ struct MindEyeView: View {
                     Button(action: {
                         viewModel.navigateToNext()
                     }) {
-                        Text(viewModel.buttonText)
+                        Text("Next")
                             .font(.system(size: 20))
                             .foregroundColor(.white)
                             .padding()
