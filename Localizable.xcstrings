@@ -31,7 +31,8 @@
             "value" : "%1$d / %2$d"
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "%lld / %lld" : {
       "comment" : "Score: ١/٣",
@@ -198,7 +199,7 @@
       }
     },
     "Highlighted Circle" : {
-
+      "shouldTranslate" : false
     },
     "Key" : {
       "extractionState" : "manual",
@@ -376,7 +377,8 @@
             "value" : "Score: %1$d out of %2$d"
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "Send" : {
       "localizations" : {
@@ -389,13 +391,16 @@
       }
     },
     "Tap to choose the disappearance case" : {
-      "comment" : "Hint for the disappearance case selection"
+      "comment" : "Hint for the disappearance case selection",
+      "shouldTranslate" : false
     },
     "Tap to choose the murder case" : {
-      "comment" : "Hint for the murder case selection"
+      "comment" : "Hint for the murder case selection",
+      "shouldTranslate" : false
     },
     "Tap to choose the theft case" : {
-      "comment" : "Hint for the theft case selection"
+      "comment" : "Hint for the theft case selection",
+      "shouldTranslate" : false
     },
     "Theft Case" : {
       "comment" : "قضيةُ سَرِقةْ",
@@ -410,13 +415,13 @@
       }
     },
     "This circle highlights the crime scene photo." : {
-
+      "shouldTranslate" : false
     },
     "This is a Crime Scene Photo." : {
-
+      "shouldTranslate" : false
     },
     "This is the background image of the story." : {
-
+      "shouldTranslate" : false
     },
     "Title: Mind's Eye" : {
       "localizations" : {
