@@ -67,7 +67,7 @@ struct Story: View {
                     .accessibilityLabel("Background Image")
                     .accessibilityHint("This is the background image of the story.")
 
-                VStack {
+                VStack(spacing: 45) {
                     Spacer()
 
                     Image("SImage")
@@ -84,9 +84,9 @@ struct Story: View {
                         )
                         .accessibilityLabel("Highlighted Circle")
                         .accessibilityHint("This circle highlights the crime scene photo.")
-
+                        .padding(.top, 90)
                     // Audio control buttons
-                    HStack(spacing: 20) {
+                    HStack(spacing: 45) {
                         Button(action: {
                             audioManager.rewindAudio()
                         }) {
@@ -148,7 +148,7 @@ struct Story: View {
                         audioManager.stopAudio()
                     }) {
                         Text("Next")
-                            .font(.headline)
+                            .font(.custom("Questv1-Bold", size: 25))
                             .foregroundColor(.white)
                             .padding()
                             .frame(width: 200, height: 50)

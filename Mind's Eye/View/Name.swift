@@ -25,10 +25,10 @@ struct Name: View {
                     .scaledToFill()
                     .ignoresSafeArea()
                 
-                VStack(spacing: 30) {
+                VStack(spacing: 50) {
                     // Main title
                     Text(NSLocalizedString("Who is the accused?", comment: "Main title"))
-                        .font(.system(size: 40))
+                        .font(.custom("Questv1-Bold", size: 45))
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                         .accessibilityLabel(NSLocalizedString("Choose the accused", comment: "Accessibility label for main title"))

@@ -23,7 +23,7 @@ struct CaseSelectionView: View {
                 
                 VStack(spacing: 30) {
                     Text(NSLocalizedString("Choose a Case", comment: ""))
-                        .font(.custom("Questv1-Bold", size: 32))
+                        .font(.custom("Questv1-Bold", size: 35))
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                         .accessibilityLabel(NSLocalizedString("Choose a Case", comment: ""))
