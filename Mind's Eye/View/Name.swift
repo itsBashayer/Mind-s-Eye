@@ -9,6 +9,7 @@ import SwiftUI
 struct Name: View {
     @State private var selectedCaseIndex: Int? = nil
     @State private var navigateToStory = false
+    @Environment(\.dismiss) private var dismiss // Access the dismiss environment action
 
     // Localized strings for cases
     let cases = [
@@ -28,7 +29,7 @@ struct Name: View {
                 VStack(spacing: 30) {
                     // Main title
                     Text(NSLocalizedString("Who is the accused?", comment: "Main title"))
-                        .font(.system(size: 40))
+                        .font(.system(size: 35))
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                         .accessibilityLabel(NSLocalizedString("Choose the accused", comment: "Accessibility label for main title"))
@@ -66,6 +67,22 @@ struct Name: View {
                     }
                 }
                 .padding()
+            }
+            .navigationTitle("Accused")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden(true) // Hide the default back button
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        dismiss() // Dismiss the current view and go back
+                    }) {
+                        Image(systemName: "chevron.backward")
+                            .foregroundColor(.white)
+                            .font(.title2)
+                            .accessibilityLabel(NSLocalizedString("Back", comment: "Back button label"))
+                            .accessibilityHint(NSLocalizedString("Go back to the previous screen", comment: "Back button hint"))
+                    }
+                }
             }
         }
     }
@@ -108,6 +125,7 @@ struct Name_Previews: PreviewProvider {
             .environment(\.layoutDirection, .leftToRight)
     }
 }
+
 #Preview("Arabic") {
     Name()
         .environment(\.locale, Locale(identifier: "AR"))

@@ -56,6 +56,7 @@ class AudioPlayerManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
 
 struct Story: View {
     @StateObject private var audioManager = AudioPlayerManager()
+    @Environment(\.dismiss) private var dismiss // For custom back button functionality
 
     var body: some View {
         NavigationStack {
@@ -162,6 +163,21 @@ struct Story: View {
                     .accessibilityLabel("Next Button")
                     .accessibilityHint("Navigates to the next screen.")
                     .padding(.bottom, 80)
+                }
+            }
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden(true)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        dismiss() // Dismiss the current view
+                    }) {
+                        Image(systemName: "chevron.backward")
+                            .foregroundColor(.white)
+                            .font(.title2)
+                            .accessibilityLabel("Back Button")
+                            .accessibilityHint("Navigates back to the previous screen.")
+                    }
                 }
             }
             .onAppear {

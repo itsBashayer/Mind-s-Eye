@@ -4,6 +4,7 @@ struct CaseSelectionView: View {
     @StateObject private var viewModel = CaseViewModel()
     @State private var selectedCaseIndex: Int? = nil  // Track the selected button
     @State private var navigateToStory = false // State for navigation
+    @Environment(\.dismiss) private var dismiss // Access the dismiss environment action
     
     var body: some View {
         NavigationStack {
@@ -49,6 +50,22 @@ struct CaseSelectionView: View {
                     }
                 }
                 .padding()
+            }
+            .navigationTitle("Cases")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden(true) // Hide the default back button
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        dismiss() // Dismiss the current view and go back
+                    }) {
+                        Image(systemName: "chevron.backward")
+                            .foregroundColor(.white)
+                            .font(.title2)
+                            .accessibilityLabel("Back")
+                            .accessibilityHint("Go back to the previous screen")
+                    }
+                }
             }
         }
     }

@@ -64,6 +64,9 @@
         }
       }
     },
+    "Accused" : {
+
+    },
     "Ahmed" : {
       "comment" : "أحمد ",
       "extractionState" : "manual",
@@ -76,6 +79,12 @@
         }
       }
     },
+    "Back" : {
+      "comment" : "Back button label"
+    },
+    "Back Button" : {
+
+    },
     "Background Image" : {
       "localizations" : {
         "ar" : {
@@ -85,6 +94,9 @@
           }
         }
       }
+    },
+    "Cases" : {
+
     },
     "Choose a Case" : {
       "localizations" : {
@@ -96,7 +108,11 @@
         }
       }
     },
+    "Choose the accused" : {
+      "comment" : "Accessibility label for main title"
+    },
     "Choose the Killer" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -178,6 +194,9 @@
         }
       }
     },
+    "Go back to the previous screen" : {
+      "comment" : "Back button hint"
+    },
     "Go to the Next Level" : {
       "localizations" : {
         "ar" : {
@@ -235,6 +254,9 @@
           }
         }
       }
+    },
+    "Navigates back to the previous screen." : {
+
     },
     "Navigates to the next screen." : {
       "localizations" : {
@@ -402,6 +424,15 @@
       "comment" : "Hint for the theft case selection",
       "shouldTranslate" : false
     },
+    "The first suspect" : {
+      "comment" : "Case hint"
+    },
+    "The second suspect" : {
+      "comment" : "Case hint"
+    },
+    "The third suspect" : {
+      "comment" : "Case hint"
+    },
     "Theft Case" : {
       "comment" : "قضيةُ سَرِقةْ",
       "extractionState" : "manual",
@@ -434,6 +465,7 @@
       }
     },
     "Who is the accused " : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -442,6 +474,9 @@
           }
         }
       }
+    },
+    "Who is the accused?" : {
+      "comment" : "Main title"
     },
     "Wound" : {
       "extractionState" : "manual",
