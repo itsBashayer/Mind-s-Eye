@@ -20,18 +20,18 @@ struct MindEyeView: View {
 
                 VStack {
                     
-                    Text(viewModel.title)
-                        .font(.system(size: 45))
+                    Text("MindEye")
+                        .font(.custom("Questv1-Bold", size: 53))
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                         .accessibilityLabel("MindEye")
                         .padding(.top, 320)
 
-                    Text(viewModel.subtitle)
-                        .font(.system(size: 20))
+                    Text("Every voice holds a secrect, every guide leads a step")
+                        .font(.custom("Questv1-Bold", size: 32))
                         .foregroundColor(.white.opacity(0.8))
                         .accessibilityLabel("Description: Every voice holds a secrect, every guide leads a step")
-                        .padding(.top, 2)
+                        .padding(.top, 30)
                         .multilineTextAlignment(.center)
 
                     Spacer()
@@ -69,7 +69,7 @@ struct MindEyeView: View {
     }
 }
 
-struct CaseSelectionViewww_Previews: PreviewProvider {
+struct MindEyeView_Previews: PreviewProvider {
     static var previews: some View {
         MindEyeView()
     }

@@ -169,6 +169,17 @@
         }
       }
     },
+    "Every voice holds a secrect, every guide leads a step" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " كُلُ صوتٍ سِرْ ، كُلُ دَليلٍ خُطوةْ"
+          }
+        }
+      }
+    },
     "Forward Button" : {
       "localizations" : {
         "ar" : {
@@ -405,6 +416,12 @@
     "Score: %d out of %d" : {
       "comment" : "Accessibility label for score",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Score: %1 out of %4"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "new",

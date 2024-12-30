@@ -203,8 +203,8 @@ struct Cards: View {
                                     withAnimation {
                                         // إعادة الضبط
                                         userAnswers.removeAll()
-                                        flippedStates = ["مفتاح": false, "جرح": false]
-                                        shakeStates = ["مفتاح": 0, "جرح": 0]
+                                        flippedStates = ["Key": false, "Wound": false]
+                                        shakeStates = ["Key": 0, "Wound": 0]
                                         evidences.shuffle()
                                         showSuccessPopup = false
                                     }
