@@ -29,16 +29,6 @@
 		865A7B742D1165DF00524862 /* Mind's EyeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mind's EyeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		8017F9842D1C033100E79819 /* Exceptions for "Mind's Eye" folder in "Mind's Eye" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"Mind-s-Eye-Info.plist",
-			);
-			target = 865A7B572D1165DE00524862 /* Mind's Eye */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		8017F97D2D1C026100E79819 /* ar.lproj */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
@@ -47,9 +37,6 @@
 		};
 		865A7B5A2D1165DE00524862 /* Mind's Eye */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				8017F9842D1C033100E79819 /* Exceptions for "Mind's Eye" folder in "Mind's Eye" target */,
-			);
 			path = "Mind's Eye";
 			sourceTree = "<group>";
 		};

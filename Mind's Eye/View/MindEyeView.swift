@@ -52,7 +52,7 @@ struct MindEyeView: View {
                         
                         
                     }
-                    .accessibilityLabel( " التالي ")
+                    .accessibilityLabel( " Next ")
                     .padding(.horizontal)
                     .padding(.bottom, 80)
 

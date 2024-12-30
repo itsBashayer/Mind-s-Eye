@@ -1,20 +1,15 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    " Description: Every voice holds a secrect, every guide leads a step " : {
-      "comment" : "الوصف: كُلُ صوتٍ سِرْ ، كُلُ دَليلٍ خُطوةْ",
-      "extractionState" : "stale",
+    " Next " : {
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الوصف: كُلُ صوتٍ سِرْ ، كُلُ دَليلٍ خُطوةْ"
+            "value" : "التَاليّ"
           }
         }
       }
-    },
-    " التالي " : {
-
     },
     "%d / %d" : {
       "comment" : "Score format: current score out of total score",
@@ -25,7 +20,8 @@
             "value" : "%1$d / %2$d"
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "%lld / %lld" : {
       "comment" : "Score: ١/٣",
@@ -79,6 +75,25 @@
         }
       }
     },
+    "CaseOneHint" : {
+      "shouldTranslate" : false
+    },
+    "CaseThreeHint" : {
+      "shouldTranslate" : false
+    },
+    "CaseTwoHint" : {
+      "shouldTranslate" : false
+    },
+    "Choose a Case" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إختْر القَضيةْ"
+          }
+        }
+      }
+    },
     "Choose the accused" : {
       "comment" : "Accessibility label for main title",
       "localizations" : {
@@ -117,7 +132,14 @@
       }
     },
     "Description: Every voice holds a secrect, every guide leads a step" : {
-
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الوصف: كُلُ صوتٍ سِرْ ، كُلُ دَليلٍ خُطوةْ"
+          }
+        }
+      }
     },
     "Disappearance Case" : {
       "comment" : "قضيةُ اختِفاء",
@@ -483,9 +505,6 @@
           }
         }
       }
-    },
-    "اختر القضية" : {
-
     }
   },
   "version" : "1.0"
