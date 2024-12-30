@@ -1,7 +1,15 @@
+
+
+
+
 import SwiftUI
 
 struct CaseSelectionView: View {
-    @StateObject private var viewModel = CaseViewModel()
+    @State private var cases = [
+        (title: NSLocalizedString("Murder Case", comment: ""), hint: NSLocalizedString("CaseOneHint", comment: "")),
+        (title: NSLocalizedString("Disappearance Case", comment: ""), hint: NSLocalizedString("CaseTwoHint", comment: "")),
+        (title: NSLocalizedString("Theft Case", comment: ""), hint: NSLocalizedString("CaseThreeHint", comment: ""))
+    ]
     @State private var selectedCaseIndex: Int? = nil  // Track the selected button
     @State private var navigateToStory = false // State for navigation
     
@@ -14,20 +22,20 @@ struct CaseSelectionView: View {
                     .ignoresSafeArea()
                 
                 VStack(spacing: 30) {
-                    Text("اختر القضية")
+                    Text(NSLocalizedString("Choose a Case", comment: ""))
                         .font(.system(size: 40))
                         .fontWeight(.bold)
                         .foregroundColor(.white)
-                        .accessibilityLabel("اختر القضية")
+                        .accessibilityLabel(NSLocalizedString("Choose a Case", comment: ""))
                         .accessibilityAddTraits(.isHeader)
                     
                     VStack(spacing: 20) {
-                        ForEach(viewModel.cases.indices, id: \.self) { index in
+                        ForEach(cases.indices, id: \.self) { index in
                             if index == 0 {
                                 NavigationLink(destination: Story(), isActive: $navigateToStory) {
                                     CaseButton(
-                                        title: viewModel.cases[index].title,
-                                        hint: viewModel.cases[index].hint,
+                                        title: cases[index].title,
+                                        hint: cases[index].hint,
                                         isSelected: selectedCaseIndex == index,
                                         onTap: {
                                             selectedCaseIndex = index
@@ -37,8 +45,8 @@ struct CaseSelectionView: View {
                                 }
                             } else {
                                 CaseButton(
-                                    title: viewModel.cases[index].title,
-                                    hint: viewModel.cases[index].hint,
+                                    title: cases[index].title,
+                                    hint: cases[index].hint,
                                     isSelected: selectedCaseIndex == index,
                                     onTap: {
                                         selectedCaseIndex = index // Set the selected case index
@@ -90,7 +98,8 @@ struct CaseSelectionView_Previews: PreviewProvider {
     }
 }
 
+
 #Preview("Arabic") {
     CaseSelectionView()
-        .environment(\.locale, Locale(identifier: "AR"))
+        .environment(\.locale, Locale(identifier: "ar"))
 }

@@ -3,6 +3,7 @@
   "strings" : {
     " Description: Every voice holds a secrect, every guide leads a step " : {
       "comment" : "الوصف: كُلُ صوتٍ سِرْ ، كُلُ دَليلٍ خُطوةْ",
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -12,8 +13,19 @@
         }
       }
     },
-    " Next button " : {
+    " التالي " : {
 
+    },
+    "%d / %d" : {
+      "comment" : "Score format: current score out of total score",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$d / %2$d"
+          }
+        }
+      }
     },
     "%lld / %lld" : {
       "comment" : "Score: ١/٣",
@@ -67,34 +79,13 @@
         }
       }
     },
-    "Choose a Case" : {
+    "Choose the accused" : {
+      "comment" : "Accessibility label for main title",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "اخِترِ القضيةْ "
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Choose a Case"
-          }
-        }
-      }
-    },
-    "Choose the Killer" : {
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "خمّن القَاتِل؟ "
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Choose the Killer"
+            "value" : "منْ هوَ المتّهمْ؟"
           }
         }
       }
@@ -124,6 +115,9 @@
           }
         }
       }
+    },
+    "Description: Every voice holds a secrect, every guide leads a step" : {
+
     },
     "Disappearance Case" : {
       "comment" : "قضيةُ اختِفاء",
@@ -386,6 +380,18 @@
         }
       }
     },
+    "Score: %d out of %d" : {
+      "comment" : "Accessibility label for score",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Score: %1$d out of %2$d"
+          }
+        }
+      },
+      "shouldTranslate" : false
+    },
     "Send" : {
       "localizations" : {
         "ar" : {
@@ -395,6 +401,18 @@
           }
         }
       }
+    },
+    "The first suspect" : {
+      "comment" : "Case hint",
+      "shouldTranslate" : false
+    },
+    "The second suspect" : {
+      "comment" : "Case hint",
+      "shouldTranslate" : false
+    },
+    "The third suspect" : {
+      "comment" : "Case hint",
+      "shouldTranslate" : false
     },
     "Theft Case" : {
       "comment" : "قضيةُ سَرِقةْ",
@@ -409,25 +427,16 @@
       }
     },
     "This circle highlights the crime scene photo." : {
-
+      "shouldTranslate" : false
     },
     "This is a Crime Scene Photo." : {
-
+      "shouldTranslate" : false
     },
     "This is the background image of the story." : {
-
+      "shouldTranslate" : false
     },
-    "Title: Mind's Eye" : {
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "العنوان: عين العقل "
-          }
-        }
-      }
-    },
-    "Who is the accused " : {
+    "Who is the accused?" : {
+      "comment" : "Main title",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -464,7 +473,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "يوسف"
+            "value" : "يوسِف"
           }
         },
         "en" : {
@@ -474,6 +483,9 @@
           }
         }
       }
+    },
+    "اختر القضية" : {
+
     }
   },
   "version" : "1.0"

@@ -24,13 +24,13 @@ struct MindEyeView: View {
                         .font(.system(size: 45))
                         .fontWeight(.bold)
                         .foregroundColor(.white)
-                        .accessibilityLabel("العنوان: عين العقل")
+                        .accessibilityLabel("MindEye")
                         .padding(.top, 320)
 
                     Text(viewModel.subtitle)
                         .font(.system(size: 20))
                         .foregroundColor(.white.opacity(0.8))
-                        .accessibilityLabel(" الوصف: كلُ صوتٍ سرْ، كلُ دليلٍ خُطوةْ ")
+                        .accessibilityLabel("Description: Every voice holds a secrect, every guide leads a step")
                         .padding(.top, 2)
                         .multilineTextAlignment(.center)
 
@@ -74,4 +74,7 @@ struct CaseSelectionViewww_Previews: PreviewProvider {
         MindEyeView()
     }
 }
-
+#Preview("Arabic") {
+    MindEyeView()
+        .environment(\.locale, Locale(identifier: "AR"))
+}
