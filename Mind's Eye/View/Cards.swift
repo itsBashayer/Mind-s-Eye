@@ -9,21 +9,21 @@ struct Cards: View {
     @State private var showSuccessPopup = false
     @State private var score = 0
     @State private var totalScore = 4  // يبدأ من 0/4
-    @State private var evidences = ["مفتاح", "جرح"].shuffled()
+    @State private var evidences = ["Key", "Wound"].shuffled()
     @State private var navigateToMainMenu = false
     @State private var currentInput = ""
     
     // الإجابات الصحيحة
-    let correctAnswers = ["مفتاح", "جرح"]
+    let correctAnswers = ["Key", "Wound"]
     
     @State private var flippedStates: [String: Bool] = [
-        "مفتاح": false,
-        "جرح": false
+        "Key": false,
+        "Wound": false
     ]
 
     @State private var shakeStates: [String: Int] = [
-        "مفتاح": 0,
-        "جرح": 0
+        "Key": 0,
+        "Wound": 0
     ]
     // أُضيف: متغير للتحكم بالصوت
     @State private var audioPlayer: AVAudioPlayer?
@@ -315,5 +315,8 @@ struct Cards_Previews: PreviewProvider {
         Cards()
     }
 }
-
+#Preview("Arabic") {
+    Cards()
+        .environment(\.locale, Locale(identifier: "AR"))
+}
 
