@@ -22,6 +22,17 @@
         }
       }
     },
+    "%d / %d" : {
+      "comment" : "Score format: current score out of total score",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$d / %2$d"
+          }
+        }
+      }
+    },
     "%lld / %lld" : {
       "comment" : "Score: ١/٣",
       "extractionState" : "manual",
@@ -36,26 +47,6 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "%1$lld / %2$lld"
-          }
-        }
-      }
-    },
-    "%lld / 4" : {
-
-    },
-    "⭐ Score: %lld / %lld" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Score: ١/٣"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "⭐ Score: %1$lld / %2$lld"
           }
         }
       }
@@ -105,6 +96,7 @@
       }
     },
     "Choose the Killer" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -152,6 +144,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ادخلِ الإجابةْ "
+          }
+        }
+      }
+    },
+    "Every voice holds a secret, Every  \n guide leads a step" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "كُلُ صوتٍ سِرْ ، كُلُ دَليلٍ خُطوةْ"
           }
         }
       }
@@ -366,6 +368,17 @@
         }
       }
     },
+    "Score: %d out of %d" : {
+      "comment" : "Accessibility label for score",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Score: %1$d out of %2$d"
+          }
+        }
+      }
+    },
     "Send" : {
       "localizations" : {
         "ar" : {
@@ -375,6 +388,15 @@
           }
         }
       }
+    },
+    "Tap to choose the disappearance case" : {
+      "comment" : "Hint for the disappearance case selection"
+    },
+    "Tap to choose the murder case" : {
+      "comment" : "Hint for the murder case selection"
+    },
+    "Tap to choose the theft case" : {
+      "comment" : "Hint for the theft case selection"
     },
     "Theft Case" : {
       "comment" : "قضيةُ سَرِقةْ",
@@ -408,6 +430,7 @@
       }
     },
     "Who is the accused " : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -449,6 +472,12 @@
           }
         }
       }
+    },
+    "اختر القاتل" : {
+
+    },
+    "من المتهم؟" : {
+
     }
   },
   "version" : "1.0"
