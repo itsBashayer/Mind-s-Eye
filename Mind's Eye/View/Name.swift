@@ -4,14 +4,18 @@
 //
 //  Created by Bashayer on 18/12/2024.
 //
-
-
 import SwiftUI
 
 struct Name: View {
-    @StateObject private var viewModel = CaseViewModel()
     @State private var selectedCaseIndex: Int? = nil
     @State private var navigateToStory = false
+
+    // Localized strings for cases
+    let cases = [
+        (NSLocalizedString("Ahmed", comment: "Case name"), NSLocalizedString("The first suspect", comment: "Case hint")),
+        (NSLocalizedString("Yusef", comment: "Case name"), NSLocalizedString("The second suspect", comment: "Case hint")),
+        (NSLocalizedString("Salman", comment: "Case name"), NSLocalizedString("The third suspect", comment: "Case hint"))
+    ]
     
     var body: some View {
         NavigationStack {
@@ -22,46 +26,42 @@ struct Name: View {
                     .ignoresSafeArea()
                 
                 VStack(spacing: 30) {
-                    Text("من هو المتهم؟")
+                    // Main title
+                    Text(NSLocalizedString("Who is the accused?", comment: "Main title"))
                         .font(.system(size: 40))
                         .fontWeight(.bold)
                         .foregroundColor(.white)
-                        .accessibilityLabel("من هو المتهم")
+                        .accessibilityLabel(NSLocalizedString("Choose the accused", comment: "Accessibility label for main title"))
                         .accessibilityAddTraits(.isHeader)
                     
                     VStack(spacing: 20) {
-                        ForEach(viewModel.cases.indices, id: \.self) { index in
-                            if index == 0 {
-                                NavigationLink(destination: Cards(), isActive: $navigateToStory) {
-                                    CaseButton(
-                                        title: "أحمد",
-                                        hint: viewModel.cases[index].hint,
-                                        isSelected: selectedCaseIndex == index,
-                                        onTap: {
+                        // Display buttons for each case
+                        ForEach(cases.indices, id: \.self) { index in
+                            NavigationLink(
+                                destination: index == 0 ? Cards() : nil,
+                                isActive: Binding(
+                                    get: { selectedCaseIndex == index && navigateToStory },
+                                    set: { newValue in
+                                        if newValue {
                                             selectedCaseIndex = index
-                                            navigateToStory = true
+                                            navigateToStory = index == 0
                                         }
-                                    )
-                                }
-                            } else if index == 1 {
-                                CaseButton(
-                                    title: "يوسف",
-                                    hint: viewModel.cases[index].hint,
-                                    isSelected: selectedCaseIndex == index,
-                                    onTap: {
-                                        selectedCaseIndex = index
                                     }
                                 )
-                            } else if index == 2 {
-                                CaseButton(
-                                    title: "سلمان",
-                                    hint: viewModel.cases[index].hint,
+                            ) {
+                                CaseSelectionButton(
+                                    title: cases[index].0,
+                                    hint: cases[index].1,
                                     isSelected: selectedCaseIndex == index,
                                     onTap: {
                                         selectedCaseIndex = index
+                                        if index == 0 {
+                                            navigateToStory = true
+                                        }
                                     }
                                 )
                             }
+                            .disabled(index != 0) // Disable navigation for non-first cases
                         }
                     }
                 }
@@ -71,7 +71,7 @@ struct Name: View {
     }
 }
 
-struct CaseeButton: View {
+struct CaseSelectionButton: View {
     let title: String
     let hint: String
     let isSelected: Bool
@@ -104,10 +104,10 @@ struct CaseeButton: View {
 struct Name_Previews: PreviewProvider {
     static var previews: some View {
         Name()
+            .environment(\.locale, Locale(identifier: "en"))
+            .environment(\.layoutDirection, .leftToRight)
     }
 }
-
-
 #Preview("Arabic") {
     Name()
         .environment(\.locale, Locale(identifier: "AR"))

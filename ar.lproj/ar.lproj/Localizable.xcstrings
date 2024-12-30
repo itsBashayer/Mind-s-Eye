@@ -200,7 +200,7 @@
       }
     },
     "Highlighted Circle" : {
-
+      "shouldTranslate" : false
     },
     "Key" : {
       "extractionState" : "manual",
