@@ -28,7 +28,7 @@ struct Name: View {
                 VStack(spacing: 50) {
                     // Main title
                     Text(NSLocalizedString("Who is the accused?", comment: "Main title"))
-                        .font(.custom("Questv1-Bold", size: 45))
+                        .font(.custom("Questv1-Bold", size: 35))
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                         .accessibilityLabel(NSLocalizedString("Choose the accused", comment: "Accessibility label for main title"))
@@ -80,7 +80,7 @@ struct CaseSelectionButton: View {
     var body: some View {
         Button(action: onTap) {
             Text(title)
-                .font(.title2)
+                .font(.custom("Questv1-Bold", size: 25))
                 .fontWeight(.semibold)
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity, minHeight: 60)

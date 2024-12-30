@@ -79,7 +79,7 @@ struct Cards: View {
                 VStack {
                     
                     Text("Collect Evidence")
-                        .font(.custom("Questv1-Bold", size: 32))
+                        .font(.custom("Questv1-Bold", size: 30))
                         .foregroundColor(.white)
                         .padding(.bottom, 40)
                         .shadow(color: .white, radius: 10, x: 0, y: 0)

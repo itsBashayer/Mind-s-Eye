@@ -21,7 +21,7 @@ struct CaseSelectionView: View {
                     .scaledToFill()
                     .ignoresSafeArea()
                 
-                VStack(spacing: 30) {
+                VStack(spacing: 45) {
                     Text(NSLocalizedString("Choose a Case", comment: ""))
                         .font(.custom("Questv1-Bold", size: 35))
                         .fontWeight(.bold)
@@ -71,7 +71,7 @@ struct CaseButton: View {
     var body: some View {
         Button(action: onTap) {
             Text(title)
-                .font(.title2)
+                .font(.custom("Questv1-Bold", size: 25))
                 .fontWeight(.semibold)
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity, minHeight: 60)
