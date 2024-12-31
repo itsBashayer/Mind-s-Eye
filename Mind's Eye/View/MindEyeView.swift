@@ -39,7 +39,7 @@ struct MindEyeView: View {
                     Button(action: {
                         viewModel.navigateToNext()
                     }) {
-                        Text(viewModel.buttonText)
+                        Text("Next")
                             .font(.system(size: 20))
                             .foregroundColor(.white)
                             .padding()
