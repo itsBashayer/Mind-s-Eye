@@ -315,4 +315,8 @@ struct Cards_Previews: PreviewProvider {
         Cards()
     }
 }
+#Preview("Arabic") {
+    Cards()
+        .environment(\.locale, Locale(identifier: "AR"))
+}
 
