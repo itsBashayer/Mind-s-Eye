@@ -78,7 +78,7 @@ struct Cards: View {
                 
                 VStack {
                     
-                    Text("Collect Evidence")
+                    Text("What is the Evidence")
                         .font(.custom("Questv1-Bold", size: 32))
                         .foregroundColor(.white)
                         .padding(.bottom, 40)
