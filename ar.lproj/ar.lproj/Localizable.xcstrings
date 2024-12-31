@@ -30,7 +30,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Score: ١/٣"
+            "value" : "٪١ / ٪٤ "
           }
         }
       }
@@ -110,23 +110,13 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "اجِمعَ الادلةْ"
+            "value" : "مَا دَليلُك؟"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Collect Evidence"
-          }
-        }
-      }
-    },
-    "Crime Scene Photo" : {
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "صورة مسرح الجريمة "
           }
         }
       }
@@ -225,9 +215,6 @@
           }
         }
       }
-    },
-    "Highlighted Circle" : {
-      "shouldTranslate" : false
     },
     "Key" : {
       "extractionState" : "manual",
@@ -463,12 +450,6 @@
           }
         }
       }
-    },
-    "This circle highlights the crime scene photo." : {
-      "shouldTranslate" : false
-    },
-    "This is a Crime Scene Photo." : {
-      "shouldTranslate" : false
     },
     "This is the background image of the story." : {
       "shouldTranslate" : false
