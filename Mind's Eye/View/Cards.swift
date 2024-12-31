@@ -9,21 +9,21 @@ struct Cards: View {
     @State private var showSuccessPopup = false
     @State private var score = 0
     @State private var totalScore = 4  // يبدأ من 0/4
-    @State private var evidences = ["Key", "Wound"].shuffled()
+    @State private var evidences = ["مفتاح", "جرح"].shuffled()
     @State private var navigateToMainMenu = false
     @State private var currentInput = ""
     
     // الإجابات الصحيحة
-    let correctAnswers = ["Key", "Wound"]
+    let correctAnswers = ["مفتاح", "جرح"]
     
     @State private var flippedStates: [String: Bool] = [
-        "Key": false,
-        "Wound": false
+        "مفتاح": false,
+        "جرح": false
     ]
 
     @State private var shakeStates: [String: Int] = [
-        "Key": 0,
-        "Wound": 0
+        "مفتاح": 0,
+        "جرح": 0
     ]
     // أُضيف: متغير للتحكم بالصوت
     @State private var audioPlayer: AVAudioPlayer?
@@ -79,7 +79,7 @@ struct Cards: View {
                 VStack {
                     
                     Text("Collect Evidence")
-                        .font(.custom("Questv1-Bold", size: 30))
+                        .font(.custom("Questv1-Bold", size: 32))
                         .foregroundColor(.white)
                         .padding(.bottom, 40)
                         .shadow(color: .white, radius: 10, x: 0, y: 0)
@@ -203,8 +203,8 @@ struct Cards: View {
                                     withAnimation {
                                         // إعادة الضبط
                                         userAnswers.removeAll()
-                                        flippedStates = ["Key": false, "Wound": false]
-                                        shakeStates = ["Key": 0, "Wound": 0]
+                                        flippedStates = ["مفتاح": false, "جرح": false]
+                                        shakeStates = ["مفتاح": 0, "جرح": 0]
                                         evidences.shuffle()
                                         showSuccessPopup = false
                                     }
@@ -314,9 +314,5 @@ struct Cards_Previews: PreviewProvider {
     static var previews: some View {
         Cards()
     }
-}
-#Preview("Arabic") {
-    Cards()
-        .environment(\.locale, Locale(identifier: "AR"))
 }
 

@@ -93,7 +93,7 @@ struct Story: View {
                             Image(systemName: "gobackward.15")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 25, height: 25)
+                                .frame(width: 40, height: 40)
                                 .foregroundColor(.white)
                         }
                         .accessibilityLabel("Rewind Button")
@@ -110,7 +110,7 @@ struct Story: View {
                             ZStack {
                                 Circle()
                                     .fill(Color(red: 0.647, green: 0.007, blue: 0.008))
-                                    .frame(width: 60, height: 60)
+                                    .frame(width: 75, height: 75)
                                     .overlay(
                                         Circle()
                                             .stroke(Color.red.opacity(0.6), lineWidth: 4)
@@ -119,7 +119,7 @@ struct Story: View {
                                 Image(systemName: audioManager.isFinished ? "arrow.counterclockwise" : (audioManager.isPlaying ? "pause.fill" : "play.fill"))
                                     .resizable()
                                     .scaledToFit()
-                                    .frame(width: 25, height: 25)
+                                    .frame(width: 40, height: 40)
                                     .foregroundColor(Color.black)
                             }
                         }
@@ -132,7 +132,7 @@ struct Story: View {
                             Image(systemName: "goforward.15")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 25, height: 25)
+                                .frame(width: 40, height: 40)
                                 .foregroundColor(.white)
                         }
                         .accessibilityLabel("Forward Button")

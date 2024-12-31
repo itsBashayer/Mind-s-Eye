@@ -31,7 +31,7 @@ struct MindEyeView: View {
                         .font(.custom("Questv1-Bold", size: 25))
                         .foregroundColor(.white.opacity(0.8))
                         .accessibilityLabel("Description: Every voice holds a secrect, every guide leads a step")
-                        .padding(.top, 30)
+                        .padding(.top, 20)
                         .multilineTextAlignment(.center)
 
                     Spacer()
