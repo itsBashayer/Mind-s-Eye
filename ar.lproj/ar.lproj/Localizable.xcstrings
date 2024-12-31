@@ -419,7 +419,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Score: %1 out of %4"
+            "value" : "١٪ من ٤٪"
           }
         },
         "en" : {
@@ -428,8 +428,7 @@
             "value" : "Score: %1$d out of %2$d"
           }
         }
-      },
-      "shouldTranslate" : false
+      }
     },
     "Send" : {
       "localizations" : {
