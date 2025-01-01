@@ -105,6 +105,33 @@
         }
       }
     },
+    "Collect Evidence" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اجِمعَ الادلةْ"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Collect Evidence"
+          }
+        }
+      }
+    },
+    "Crime Scene Photo" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "منْ هوَ المتّهمْ؟"
+          }
+        }
+      }
+    },
     "Description: Every voice holds a secrect, every guide leads a step" : {
       "localizations" : {
         "ar" : {
