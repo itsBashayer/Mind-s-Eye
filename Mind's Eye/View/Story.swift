@@ -1,8 +1,3 @@
-//  Name.swift
-//  Mind's Eye
-//
-//  Created by Bashayer on 12/12/2024.
-
 import SwiftUI
 import AVFoundation
 
@@ -75,16 +70,17 @@ struct Story: View {
                         .scaledToFill()
                         .clipShape(Circle())
                         .frame(width: 260, height: 260)
-                       // .accessibilityLabel("Crime Scene Photo")
-                        //.accessibilityHint("This is a Crime Scene Photo.")
+                        .accessibilityLabel("Crime Scene Photo")
+                        .accessibilityHint("This is a Crime Scene Photo.")
                         .overlay(
                             Circle()
                                 .stroke(Color.red, lineWidth: 2)
                                 .frame(width: 280, height: 280)
                         )
-                        //.accessibilityLabel("Highlighted Circle")
-                        //.accessibilityHint("This circle highlights the crime scene photo.")
+                        .accessibilityLabel("Highlighted Circle")
+                        .accessibilityHint("This circle highlights the crime scene photo.")
                         .padding(.top, 90)
+                    
                     // Audio control buttons
                     HStack(spacing: 45) {
                         Button(action: {
@@ -121,7 +117,6 @@ struct Story: View {
                                     .scaledToFit()
                                     .frame(width: 40, height: 40)
                                     .foregroundColor(Color.black)
-                                
                             }
                         }
                         .accessibilityLabel(audioManager.isFinished ? "Restart Button" : (audioManager.isPlaying ? "Pause Button" : "Play Button"))
@@ -168,11 +163,11 @@ struct Story: View {
             .onAppear {
                 audioManager.prepareAudio()
             }
+            .navigationBarBackButtonHidden(true) // Hides the back button
         }
     }
 }
 
-#Preview("Arabic") {
+#Preview {
     Story()
-        .environment(\.locale, Locale(identifier: "AR"))
 }

@@ -1,17 +1,24 @@
-
-
-
-
 import SwiftUI
 
-struct CaseSelectionView: View {
-    @State private var cases = [
-        (title: NSLocalizedString("Murder Case", comment: ""), hint: NSLocalizedString("CaseOneHint", comment: "")),
-        (title: NSLocalizedString("Disappearance Case", comment: ""), hint: NSLocalizedString("CaseTwoHint", comment: "")),
-        (title: NSLocalizedString("Theft Case", comment: ""), hint: NSLocalizedString("CaseThreeHint", comment: ""))
+struct CaseModel: Identifiable {
+    let id = UUID()
+    let title: String
+    let hint: String
+}
+
+class CaseViewModel: ObservableObject {
+    @Published var cases: [CaseModel] = [
+        CaseModel(title: NSLocalizedString("Murder Case", comment: ""), hint: NSLocalizedString("CaseOneHint", comment: "")),
+        CaseModel(title: NSLocalizedString("Disappearance Case", comment: ""), hint: NSLocalizedString("CaseTwoHint", comment: "")),
+        CaseModel(title: NSLocalizedString("Theft Case", comment: ""), hint: NSLocalizedString("CaseThreeHint", comment: ""))
     ]
+}
+
+struct CaseSelectionView: View {
+    @StateObject private var viewModel = CaseViewModel()
     @State private var selectedCaseIndex: Int? = nil  // Track the selected button
     @State private var navigateToStory = false // State for navigation
+    @Environment(\.presentationMode) var presentationMode // Environment variable to dismiss the view
     
     var body: some View {
         NavigationStack {
@@ -30,12 +37,12 @@ struct CaseSelectionView: View {
                         .accessibilityAddTraits(.isHeader)
                     
                     VStack(spacing: 20) {
-                        ForEach(cases.indices, id: \.self) { index in
+                        ForEach(viewModel.cases.indices, id: \.self) { index in
                             if index == 0 {
                                 NavigationLink(destination: Story(), isActive: $navigateToStory) {
                                     CaseButton(
-                                        title: cases[index].title,
-                                        hint: cases[index].hint,
+                                        title: viewModel.cases[index].title,
+                                        hint: viewModel.cases[index].hint,
                                         isSelected: selectedCaseIndex == index,
                                         onTap: {
                                             selectedCaseIndex = index
@@ -45,8 +52,8 @@ struct CaseSelectionView: View {
                                 }
                             } else {
                                 CaseButton(
-                                    title: cases[index].title,
-                                    hint: cases[index].hint,
+                                    title: viewModel.cases[index].title,
+                                    hint: viewModel.cases[index].hint,
                                     isSelected: selectedCaseIndex == index,
                                     onTap: {
                                         selectedCaseIndex = index // Set the selected case index
@@ -57,6 +64,20 @@ struct CaseSelectionView: View {
                     }
                 }
                 .padding()
+            }
+            .navigationBarBackButtonHidden(true)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss() // Custom back button action
+                    }) {
+                        Image(systemName: "chevron.left") // Custom back icon
+                            .foregroundColor(.white) // Set color to white
+                            .accessibilityLabel("Back") // Add accessibility label
+                            .accessibilityHint("Go back to the previous screen") // Accessibility hint
+                            .padding() // Add padding to make it easier to tap
+                    }
+                }
             }
         }
     }
@@ -92,12 +113,18 @@ struct CaseButton: View {
     }
 }
 
+struct Storys: View {
+    var body: some View {
+        Text("Story View")
+            .font(.title)
+    }
+}
+
 struct CaseSelectionView_Previews: PreviewProvider {
     static var previews: some View {
         CaseSelectionView()
     }
 }
-
 
 #Preview("Arabic") {
     CaseSelectionView()

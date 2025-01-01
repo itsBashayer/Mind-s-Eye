@@ -1,15 +1,8 @@
-//
-//  Untitled.swift
-//  EYEGAMEAPP
-//
-//  Created by Malak on 18/12/2024.
-//
-
 import SwiftUI
 
 struct MindEyeView: View {
-    @ObservedObject var viewModel = MindEyeViewModel()
-    
+    @State private var isNextViewActive = false
+
     var body: some View {
         NavigationStack {
             ZStack {
@@ -19,7 +12,6 @@ struct MindEyeView: View {
                     .ignoresSafeArea()
 
                 VStack {
-                    
                     Text("MindEye")
                         .font(.custom("Questv1-Bold", size: 53))
                         .fontWeight(.bold)
@@ -27,17 +19,17 @@ struct MindEyeView: View {
                         .accessibilityLabel("MindEye")
                         .padding(.top, 320)
 
-                    Text("Every voice holds a secrect, every guide leads a step")
+                    Text("Every voice holds a secret, every guide leads a step")
                         .font(.custom("Questv1-Bold", size: 25))
                         .foregroundColor(.white.opacity(0.8))
-                        .accessibilityLabel("Description: Every voice holds a secrect, every guide leads a step")
+                        .accessibilityLabel("Description: Every voice holds a secret, every guide leads a step")
                         .padding(.top, 20)
                         .multilineTextAlignment(.center)
 
                     Spacer()
 
                     Button(action: {
-                        viewModel.navigateToNext()
+                        isNextViewActive = true
                     }) {
                         Text("Next")
                             .font(.system(size: 20))
@@ -49,22 +41,19 @@ struct MindEyeView: View {
                                 RoundedRectangle(cornerRadius: 40)
                                     .stroke(Color.white, lineWidth: 2)
                             )
-                        
-                        
                     }
-                    .accessibilityLabel( " Next ")
+                    .accessibilityLabel("Next")
                     .padding(.horizontal)
                     .padding(.bottom, 80)
 
                     NavigationLink(
                         destination: CaseSelectionView(),
-                        isActive: $viewModel.isNextViewActive,
+                        isActive: $isNextViewActive,
                         label: { EmptyView() }
                     )
                 }
                 .padding()
             }
-           
         }
     }
 }
@@ -74,7 +63,10 @@ struct MindEyeView_Previews: PreviewProvider {
         MindEyeView()
     }
 }
+
 #Preview("Arabic") {
     MindEyeView()
-        .environment(\.locale, Locale(identifier: "AR"))
+        .environment(\.locale, Locale(identifier: "ar"))
 }
+
+

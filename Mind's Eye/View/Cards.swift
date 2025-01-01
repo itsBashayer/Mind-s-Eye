@@ -9,6 +9,7 @@ struct Cards: View {
     @State private var evidences = ["مفتاح", "جرح"].shuffled()
     @State private var navigateToMainMenu = false
     @State private var currentInput = ""
+    @Environment(\.presentationMode) var presentationMode
     
     // الإجابات الصحيحة
     let correctAnswers = ["مفتاح", "جرح"]
@@ -159,6 +160,20 @@ struct Cards: View {
                         .opacity(currentInput.isEmpty ? 0.5 : 1.0)
                     }
                     .padding()
+                }
+                .navigationBarBackButtonHidden(true)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button(action: {
+                            presentationMode.wrappedValue.dismiss() // Custom back button action
+                        }) {
+                            Image(systemName: "chevron.left") // Custom back icon
+                                .foregroundColor(.white) // Set color to white
+                                .accessibilityLabel("Back") // Add accessibility label
+                                .accessibilityHint("Go back to the previous screen") // Accessibility hint
+                                .padding() // Add padding to make it easier to tap
+                        }
+                    }
                 }
                 
                 // بوب أب النجاح
@@ -312,3 +327,6 @@ struct Cards_Previews: PreviewProvider {
         Cards()
     }
 }
+
+
+
