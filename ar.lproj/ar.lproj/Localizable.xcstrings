@@ -466,6 +466,7 @@
       "shouldTranslate" : false
     },
     "What is the Evidence" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
