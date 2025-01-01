@@ -64,6 +64,7 @@
 
     },
     "Background Image" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -237,9 +238,6 @@
           }
         }
       }
-    },
-    "Highlighted Circle" : {
-
     },
     "Key" : {
       "extractionState" : "manual",
@@ -479,14 +477,8 @@
         }
       }
     },
-    "This circle highlights the crime scene photo." : {
-
-    },
     "This is a Crime Scene Photo." : {
 
-    },
-    "This is the background image of the story." : {
-      "shouldTranslate" : false
     },
     "Who is the accused?" : {
       "comment" : "Main title",

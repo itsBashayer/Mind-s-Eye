@@ -10,7 +10,7 @@ struct Name: View {
     @State private var selectedCaseIndex: Int? = nil
     @State private var navigateToStory = false
     @State private var audioPlayer: AVAudioPlayer?
-
+    @Environment(\.presentationMode) var presentationMode 
     let cases = [
         (NSLocalizedString("Ahmed", comment: "Case name"), NSLocalizedString("The first suspect", comment: "Case hint")),
         (NSLocalizedString("Yusef", comment: "Case name"), NSLocalizedString("The second suspect", comment: "Case hint")),
@@ -65,6 +65,20 @@ struct Name: View {
                     }
                 }
                 .padding()
+            }
+            .navigationBarBackButtonHidden(true)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss() // Custom back button action
+                    }) {
+                        Image(systemName: "chevron.left") // Custom back icon
+                            .foregroundColor(.white) // Set color to white
+                            .accessibilityLabel("Back") // Add accessibility label
+                            .accessibilityHint("Go back to the previous screen") // Accessibility hint
+                            .padding() // Add padding to make it easier to tap
+                    }
+                }
             }
         }
     }

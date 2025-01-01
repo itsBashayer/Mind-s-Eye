@@ -59,9 +59,7 @@ struct Story: View {
                     .resizable()
                     .scaledToFill()
                     .edgesIgnoringSafeArea(.all)
-                    .accessibilityLabel("Background Image")
-                    .accessibilityHint("This is the background image of the story.")
-
+                   
                 VStack(spacing: 45) {
                     Spacer()
 
@@ -77,8 +75,7 @@ struct Story: View {
                                 .stroke(Color.red, lineWidth: 2)
                                 .frame(width: 280, height: 280)
                         )
-                        .accessibilityLabel("Highlighted Circle")
-                        .accessibilityHint("This circle highlights the crime scene photo.")
+                       
                         .padding(.top, 90)
                     
                     // Audio control buttons
