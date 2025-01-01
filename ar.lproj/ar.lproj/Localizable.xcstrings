@@ -105,22 +105,6 @@
         }
       }
     },
-    "Collect Evidence" : {
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "مَا دَليلُك؟"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Collect Evidence"
-          }
-        }
-      }
-    },
     "Description: Every voice holds a secrect, every guide leads a step" : {
       "localizations" : {
         "ar" : {
@@ -165,7 +149,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : " كُلُ صوتٍ سِرْ ، كُلُ دَليلٍ خُطوةْ"
+            "value" : " كُلُ صوتٍ سِرْ، كُلُ دَليلٍ خُطوةْ"
           }
         }
       }
@@ -453,6 +437,16 @@
     },
     "This is the background image of the story." : {
       "shouldTranslate" : false
+    },
+    "What is the Evidence" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مَا دَليلُك؟"
+          }
+        }
+      }
     },
     "Who is the accused?" : {
       "comment" : "Main title",
