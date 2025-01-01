@@ -18,8 +18,9 @@ struct MindEyeView: View {
                         .foregroundColor(.white)
                         .accessibilityLabel("MindEye")
                         .padding(.top, 320)
-
-                    Text("Every voice holds a secret, every guide leads a step")
+                    
+                    
+                    Text(NSLocalizedString("Every voice holds a secret, every guide leads a step", comment: "Main title"))
                         .font(.custom("Questv1-Bold", size: 25))
                         .foregroundColor(.white.opacity(0.8))
                         .accessibilityLabel("Description: Every voice holds a secret, every guide leads a step")

@@ -1,17 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    " Next " : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "التَاليّ"
-          }
-        }
-      }
-    },
     "%d / %d" : {
       "comment" : "Score format: current score out of total score",
       "localizations" : {
@@ -135,19 +124,15 @@
         }
       }
     },
-    "Description: Every voice holds a secrect, every guide leads a step" : {
-      "extractionState" : "stale",
+    "Description: Every voice holds a secret, every guide leads a step" : {
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الوصف: كُلُ صوتٍ سِرْ، كُلُ دَليلٍ خُطوةْ"
+            "value" : " كُلُ صوتٍ سِرْ، كُلُ دَليلٍ خُطوةْ"
           }
         }
       }
-    },
-    "Description: Every voice holds a secret, every guide leads a step" : {
-
     },
     "Disappearance Case" : {
       "comment" : "قضيةُ اختِفاء",
@@ -189,7 +174,15 @@
       }
     },
     "Every voice holds a secret, every guide leads a step" : {
-
+      "comment" : "Main title",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " كُلُ صوتٍ سِرْ، كُلُ دَليلٍ خُطوةْ"
+          }
+        }
+      }
     },
     "Forward Button" : {
       "localizations" : {
@@ -489,17 +482,6 @@
     },
     "This is the background image of the story." : {
       "shouldTranslate" : false
-    },
-    "What is the Evidence" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "مَا دَليلُك؟"
-          }
-        }
-      }
     },
     "Who is the accused?" : {
       "comment" : "Main title",
