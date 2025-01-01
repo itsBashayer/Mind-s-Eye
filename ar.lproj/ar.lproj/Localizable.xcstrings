@@ -4,35 +4,40 @@
     "%d / %d" : {
       "comment" : "Score format: current score out of total score",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "١% / ٤%"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "%1$d / %2$d"
           }
         }
-      },
-      "shouldTranslate" : false
+      }
     },
     "%lld / %lld" : {
-      "comment" : "Score: ١/٣",
+      "comment" : "١% / ٤%",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "٪١ / ٪٤ "
+            "value" : "١% / ٤%"
           }
         }
       }
     },
     "⭐ Score: %lld / 3" : {
-      "comment" : "Score: ١/٣",
+      "comment" : "١% / ٤%",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Score: ١/٣"
+            "value" : "١% / ٤%"
           }
         }
       }
