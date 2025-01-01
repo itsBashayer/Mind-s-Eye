@@ -9,11 +9,14 @@
 //        }
 //    }
 //}
+
+
+
 import SwiftUI
 
 struct MindEyeView: View {
-    @ObservedObject var viewModel = MindEyeViewModel()
-    
+    @State private var isNextViewActive = false
+
     var body: some View {
         NavigationStack {
             ZStack {
@@ -23,27 +26,26 @@ struct MindEyeView: View {
                     .ignoresSafeArea()
 
                 VStack {
-                    
-                    Text(viewModel.title)
-                        .font(.system(size: 45))
+                    Text("MindEye")
+                        .font(.custom("Questv1-Bold", size: 53))
                         .fontWeight(.bold)
                         .foregroundColor(.white)
-                        .accessibilityLabel("العنوان: عين العقل")
+                        .accessibilityLabel("MindEye")
                         .padding(.top, 320)
 
-                    Text(viewModel.subtitle)
-                        .font(.system(size: 20))
+                    Text("Every voice holds a secret, every guide leads a step")
+                        .font(.custom("Questv1-Bold", size: 25))
                         .foregroundColor(.white.opacity(0.8))
-                        .accessibilityLabel("الوصف: كُلّ صوتٍ سرّ، كُلّ دليل خُطوة")
-                        .padding(.top, 2)
+                        .accessibilityLabel("Description: Every voice holds a secret, every guide leads a step")
+                        .padding(.top, 20)
                         .multilineTextAlignment(.center)
 
                     Spacer()
 
                     Button(action: {
-                        viewModel.navigateToNext()
+                        isNextViewActive = true
                     }) {
-                        Text(viewModel.buttonText)
+                        Text("Next")
                             .font(.system(size: 20))
                             .foregroundColor(.white)
                             .padding()
@@ -53,28 +55,31 @@ struct MindEyeView: View {
                                 RoundedRectangle(cornerRadius: 40)
                                     .stroke(Color.white, lineWidth: 2)
                             )
-                        
-                        
                     }
-                    .accessibilityLabel("زر التالي")
+                    .accessibilityLabel("Next")
                     .padding(.horizontal)
                     .padding(.bottom, 80)
 
                     NavigationLink(
                         destination: CaseSelectionView(),
-                        isActive: $viewModel.isNextViewActive,
+                        isActive: $isNextViewActive,
                         label: { EmptyView() }
                     )
                 }
                 .padding()
             }
-           
         }
     }
 }
 
-struct CaseSelectionViewww_Previews: PreviewProvider {
+struct MindEyeView_Previews: PreviewProvider {
     static var previews: some View {
         MindEyeView()
     }
 }
+
+#Preview("Arabic") {
+    MindEyeView()
+        .environment(\.locale, Locale(identifier: "ar"))
+}
+
